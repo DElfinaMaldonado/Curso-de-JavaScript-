@@ -28,3 +28,7 @@ function returned () {
         console.log('Hola Mundo');
     }
 }
+
+
+let saludo = returned();
+saludo();

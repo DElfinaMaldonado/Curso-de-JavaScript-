@@ -1,9 +1,15 @@
+// Las Factory-functions → Permiten crear objetos de una manera sencilla y no repetitiva
 // Deben de utilizar camelCase
+
+
+//Ejemplo: Imaginemos que tenemos que crear multiples usuarios y todos deben de cumplir con una estructura similar
+
+/*1.- Se escribe la logica una vez en la funcion y se usa como fabrica para crear nuevos objetos*/
 
 function crearPersona(nombre, edad) {
     // El hacer un function,ayuda que al crear usuarios no se necesite repetir las propiedades
     return {
-        nombre: nombre,
+        nombre: nombre, //Es igual al tener → nombre,
         edad: edad,
         saludar: function () {
             console.log(
