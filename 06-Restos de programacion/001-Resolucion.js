@@ -137,7 +137,7 @@ let  cantidad = 0;
  */
 let numero = prompt (" Ingrese el numero que usted quiera");
 do {
-    if (numero * 2 == 0) {
+    if (numero * numero == 10) {
         console.log('Numero par', numero);
     }
     numero++;
