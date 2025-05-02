@@ -12,4 +12,4 @@ do { //→ Ejecutar la proporcion de codigo
         console.log('Numero par', i);
     }
     i++;
-} while (i < 3); //→  y luego realizara la evaluacion y si se cumple vuelve a subir 
+} while (i < 3); //→  y luego realizara la evaluacion y si se cumple vuelve a subir
