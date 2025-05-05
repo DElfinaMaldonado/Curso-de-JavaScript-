@@ -1,0 +1,66 @@
+/** FUNCIONES SIN RETORNO
+ * Devuelve undefined. Si se requiere que la funcion no devuelva nada, no se utiliza retur.
+ */
+
+function cumplir() {
+console.log("Hola");
+}
+let resultado = cumplir();
+console.log(resultado);
+
+
+
+/** FUNCIONES CON UN PARAMETRO
+ * Acepta una unica entrada o variable
+ */
+
+function hello(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+    hello("Frida");
+
+
+/** FUNCIONES VARIOS PARAMETROS
+ * Para definir una funcion con multiples parametros,
+ * se listan los nombres de los parametros separados
+ * por comas dentro de los parantesis de la definicion de la funcion
+ */
+
+function sumar(numero1, numero2, numero3){
+    return numero1 + numero2 + numero3;
+}
+console.log(sumar(2,3,4)); // Salida: 9
+
+
+
+/** PARAMETRO REST
+ * Permite representar un numero indefinido de argumentos como un array
+ */
+function imprimirNumeros (...numeros) {
+    console.log("Numeros recibidos", numeros);
+}
+imprimirNumeros(1,2,3,4,5,); // Salida: Numeros recibidos: [1, 2, 3, 4, 5]
+
+
+/** PARAMETROS DETERMINADOS
+ * Es un valor o dato especifico que se usa para definir o establecer las condicion de un proceso o sistema
+ */
+
+function saludar(nombre = "Usuario") {
+    console.log("Hola, " + nombre + "!");
+}
+
+  saludar("Juan");  // Salida: Hola, Juan!
+  saludar();         // Salida: Hola, Usuario!
+
+
+/** SETENCIA return
+ * Finaliza la ejecucuion de la funcion y especifica un valor para ser devuelto a quien llama a la funcion
+ */
+
+// La funcion devuleve el cuadro de u argumento, x es el numero
+function cuadrado(x) {
+    return x * x;
+}
+
+
