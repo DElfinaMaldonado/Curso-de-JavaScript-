@@ -1,11 +1,11 @@
 /* Crea ejemplos de funciones básicas */
 
-/** FUNCIONES SIN PARAMETROS
+                /** FUNCIONES SIN PARAMETROS
  * No reciben valores de entrada cuando se llaman, y su codigo se ejecuta directamente sin depender de argumentos externos
  * Se utiliza en los sigueintes casos:
  * Mostrar un mensaje
  * Ejecutar una accion especifica
- * Realizar un calculo/
+ * Realizar un calculo */
 
 function saludar () {
     console.log('Hola, Mundo');
@@ -70,12 +70,43 @@ function ejemplo1() {
 ejemplo1();
 
 
-/** FUNCIONES SIN RETORNO
- * Devuelve undefined. Si se requiere que la funcion no devuelva nada, no se utiliza retur.
- */
+
+
+
+
+                /** FUNCIONES SIN RETORNO
+ * Devuelve undefined. Si se requiere que la funcion no devuelva nada, no se utiliza retur.*/
 
 function cumplir() {
     console.log("Hola");
     }
     let resultado = cumplir();
     console.log(resultado);
+
+/** Problema 1:
+ *Escribe una función que imprima "¡Bienvenido al sistema!" en la consola
+cada vez que sea llamada.
+ */
+
+function mensaje() {
+    console.log("¡Bienvenido al sistema!")
+}
+mensaje();
+mensaje();
+mensaje();
+
+
+/**PROBLEMA 2:
+ *Crea una función que imprima una cuenta regresiva desde 10 hasta 1 en la consola,
+mostrando cada número en orden descendente.
+ */
+let cuenta = 10;
+function regresiva (){
+    while (cuenta <= 10){
+        if (cuenta == 1) {
+            console.log('Cuenta regresiva:', cuenta)
+        }
+        cuenta--;
+    }
+}
+regresiva();
