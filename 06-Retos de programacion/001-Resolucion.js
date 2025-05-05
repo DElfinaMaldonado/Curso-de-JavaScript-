@@ -246,33 +246,30 @@ return 0;
 }
 */
 
-
 //Imaginemos un problema donde queremos mapear números a días de la semana:
-let dias= prompt("Ingrese un numero del 1 al 10:");
+let dias= 3;
 switch (dias) {
     case 1:
-        return dias = 1;
-        console.log('lunes', + dias);
+        console.log('Lunes');
         break;
-    case '2':
-        console.log(Martes);
+    case 2:
+        console.log('Martes');
         break;
-    case '3':
-        console.log(Miercoles);
+    case 3:
+        console.log('Miercoles');
         break;
-    case '4':
-        console.log(Jueves);
+    case 4:
+        console.log('Jueves');
         break;
-    case '5':
-        console.log(Viernes);
+    case 5:
+        console.log('Viernes');
         break;
-    case '6':
-        console.log(Sabado)
+    case 6:
+        console.log('Sabado')
         break;
-    case '7':
-        console.log(Domingo);
+    case 7:
+        console.log('Domingo');
         break;
     default:
         console.log('Esto no es un dia en la semana');
 }
-
