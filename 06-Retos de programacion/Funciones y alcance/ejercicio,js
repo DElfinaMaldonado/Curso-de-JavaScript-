@@ -1,13 +1,3 @@
-/** FUNCIONES SIN RETORNO
- * Devuelve undefined. Si se requiere que la funcion no devuelva nada, no se utiliza retur.
- */
-
-function cumplir() {
-console.log("Hola");
-}
-let resultado = cumplir();
-console.log(resultado);
-
 
 
 /** FUNCIONES CON UN PARAMETRO
