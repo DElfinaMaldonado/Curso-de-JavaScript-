@@ -165,20 +165,35 @@ parametros(0);
  * Define una función que reciba un número entero como parámetro y
  * muestre en la consola todos los números pares desde 1 hasta ese número.
  */
-
-function pares(entero){
-    while(entero <=10){
-        entero++;
-        if(entero)
+function paresitos(digito) {
+    for (let i = 1; i <= digito; i++) {
+        if (i % 2 === 0) {
+            console.log('Número par: ' + i);
+        }
     }
 }
+paresitos(20);
 
-let impresion = 0;
-while (impresion <= 10) {
-    impresion++;
-    if (impresion % 2 === 0 ) {
-        continue;
+
+/** PROBEMA 3:
+ * Define una función que reciba un número entero y determine si es múltiplo de 3,
+ * de 5 o de ambos, mostrando el resultado en la consola.
+ */
+
+function multiplos_Numero(cifra){
+    if (cifra % 3 === 0) {
+        console.log('El numero es multiplo de 3');
+    } else if (cifra % 5 === 0) {
+        console.log('El numero es multiplo de 5');
+    } else {
+        console.log('El numero no es multiplo de 3 y de 5');
+    }
 }
-console.log('omitir numeros pares ' + impresion);
-}
+multiplos_Numero(9);
+multiplos_Numero(25);
+
+
+
+
+
 
