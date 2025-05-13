@@ -74,7 +74,7 @@ let lista2 = ["manzana", "banana", "cereza"];
 lista2.splice(1,1,"pera");
 console.log(lista2); // Salida → ['manzana', 'pera', 'cereza']
 
-//Usando map() para generar una nueva lista con ele cambio
+//Usando map() para generar una nueva lista con el cambio
 let lista3 = ["manzana", "banana", "pera"];
 lista3 = lista3.map((item, index) => index === 1 ? "mango" : item);
 console.log(lista3); // Salida → ['manzana', 'mango', 'pera']
