@@ -272,6 +272,7 @@ extraer();
 
 
 
+
 /// Nivel intermedio ///
 
 /** EJERCICIO 1: Extraer la subcadena
@@ -287,8 +288,104 @@ sacar_contenido();
 /** EJERCICIO 2: Crear una función que reciba una cadena y devuelva una nueva cadena
  * Crear una función que reciba una cadena y devuelva una nueva cadena con los primeros 5 caracteres eliminados.
  */
-function devolver_Cadena () {
+function devolver_Cadena (){
     const dato = "cadena original";
-    const devolucion = dato.
+    const eliminacion_Caracteres = dato.slice (5); //adena ori
+    console.log(eliminacion_Caracteres);
 }
 devolver_Cadena();
+
+
+/** EJERICICO 3: Encontrar todas las posiciones
+ * Encontrar todas las posiciones donde aparece la subcadena "ab" en la cadena "abcabcabc
+ */
+function posiciones_cadena(original_posiciones, subcadena_posiciones) { //Se crea la funcion con los parametros de la cadena original y la subcaden
+  const indices = [];  //Se crea una variable con un arreglo vacio
+  let index = original_posiciones.indexOf(subcadena_posiciones); // se crea la variable de indice y se busca en la subcadena por medio de indexOf
+  while (index !== -1) { // Se hace un ciclo while en donde el index se veriifca la posicion en -1
+    indices.push(index); //Se manda a llamar la variable de indices y con push  → se utiliza para devolver la longuitud
+    index = original_posiciones.indexOf(subcadena_posiciones, index + 1);  //Se manda a llamar al index en donde se va a a incrememtar en 1 para encontrar las posiciones
+  }
+  return indices; // se retorna los indices
+}
+const cadena_OriginalPosiciones= "abcabcabcabc"; // Se crea la varible para poder agregar el valor que es abcabcabcabc
+const encontrar_Posiciones= "ab"; //Se crea otra variable para encontra el valor de ab que se quiere buscar
+const colocacion = posiciones_cadena(cadena_OriginalPosiciones, encontrar_Posiciones); //Se crea una variable para poder mandar a llamar la cadena original y el valor que se quiere buscar
+console.log(colocacion); //Se manda a llamar la variable en donde estan las otras cadenas con los valores, para poder imprimir
+
+
+/** EJERCICIO 4:
+ * Crear una función que reciba una cadena y devuelva la subcadena más larga que no contenga caracteres repetidos.
+ */
+function no_Repetidos (elementos){
+return [...new Set(elementos)].join('');
+}
+const cadena_OriginalRepetidos = "Seestarecibiendounacadenaconcaracteresrepetidos";
+const cadena_ElimancionRepetidos = no_Repetidos(cadena_OriginalRepetidos);
+console.log(cadena_ElimancionRepetidos); //Sestarcibndoup
+
+
+/** EJERICIO 5:
+ * Extraer la subcadena "Java" de la cadena "JavaScript" usando el método `substr`
+ */
+function sacar() {
+const subcadena_Extaer = "JavaScript";
+console.log(subcadena_Extaer. substring(0,4));
+}
+sacar();
+
+
+
+
+/// Nivel dificil ///
+
+/** EJERCICIO 1: Exttraer todas las subcadenas
+ * Extraer todas las subcadenas de longitud 3 de la cadena "abcdef".
+ */
+function extraer() {
+let extrar_Caracteres = "abcdef";
+console.log("(0,3): " + extrar_Caracteres.substring(0,3));
+console.log("(1,4): " + extrar_Caracteres.substring(1,4));
+console.log("(2,5): " + extrar_Caracteres.substring(2,5));
+console.log("(3,6): " + extrar_Caracteres.substring(3,6));
+}
+extraer();
+
+
+
+/** EJERCICIO 2:
+ * Crear una función que reciba dos cadenas
+ * y devuelva la subcadena más larga que aparece en ambas
+ */
+function subcadenaMasLarga(str1, str2) {
+    let maxSubcadena = "";
+    for (let i = 0; i < str1.length; i++) {
+        for (let j = i + 1; j <= str1.length; j++) {
+            let subcadena = str1.substring(i, j);
+            if (str2.includes(subcadena) && subcadena.length > maxSubcadena.length) {
+                maxSubcadena = subcadena;
+            }
+        }
+    }
+    return maxSubcadena;
+}
+console.log(subcadenaMasLarga("Search", "Searchhello"));
+
+
+/** EJERCICIO 3: Dividir la cadena
+ * Dividir la cadena "Hola Mundo" en subcadenas de longitud 2.
+ */
+
+
+function dividir_longitud() {
+    let dividir_Dos = "Hola Mundo";
+    for (let i = 0; i < dividir_Dos.length; i += 2) {
+        console.log(`(${i},${i+2}): ` + dividir_Dos.substring(i, i + 2));
+    }
+}
+dividir_longitud();
+
+
+/** EJERCICIO 4: Encontsr todas las cadenas
+ *  Encontrar todas las subcadenas únicas de la cadena "abcabc"
+ */
