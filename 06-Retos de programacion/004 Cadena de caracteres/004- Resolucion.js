@@ -389,3 +389,130 @@ dividir_longitud();
 /** EJERCICIO 4: Encontsr todas las cadenas
  *  Encontrar todas las subcadenas únicas de la cadena "abcabc"
  */
+function cadenas_Unicas () {
+    let encontar_Cadenas =" abcabc";
+    console.log("(0,4): " + encontar_Cadenas.substring(0,4));
+    console.log("(0,5): " + encontar_Cadenas.substring(0,5));
+    console.log("(0,6): " + encontar_Cadenas.substring(0,6));
+    console.log("(1,3): " + encontar_Cadenas.substring(1,3));
+    console.log("(2,4): " + encontar_Cadenas.substring(2,4));
+    console.log("(3,5): " + encontar_Cadenas.substring(3,5));
+    console.log("(4,6): " + encontar_Cadenas.substring(4,6));
+    console.log("(5,6): " + encontar_Cadenas.substring(5,6));
+
+}
+cadenas_Unicas()
+
+
+/** EJERCICIO 5: Intercambiar caracteres
+ * Crear una función que reciba una cadena y devuelva una nueva donde el primer
+ * y último carácter hayan sido intercambiados.
+ */
+function intercambiar_Caractereres(serie){
+let primer_cambio = serie[0];
+let segundo_Cambio = serie[serie.length -1];
+let original_Cadena = segundo_Cambio + serie.slice(1, -1) + primer_cambio;
+return original_Cadena;
+}
+console.log(intercambiar_Caractereres("Paleteria"));
+console.log(intercambiar_Caractereres("Montes"));
+
+
+
+
+
+
+            // LONGUITUD → length
+/** Es un objeto string que representa la longuitud de una cadena, en unidades
+ */
+                 // SINTAXIS
+         /** str.length
+          */
+
+
+/** EJERCICIO FACIL */
+
+/** EJERCICIO 1: Obtener la longitud de una cadena:
+ * Escribe una función que reciba una cadena y devuelva su cantidad de caracteres
+ * utilizando `.length
+ */
+function stringLength(longitud) {
+  return longitud.length;
+}
+let myString = "Hello, world!";
+let length = stringLength(myString);
+console.log(length); //  13
+
+/** EJERCICIO 2: Comparar dos cadenas por longitud:
+ * Crea una función que compare dos cadenas y devuelva cuál es más larga.
+ */
+function longitud_Larga (){
+function stringComparision(number_0ne,number_Two) {
+  if (number_0ne.length > number_Two.length) {
+    return number_0ne;
+  } else if (number_Two.length > number_0ne.length) {
+    return number_Two;
+  } else {
+    return "Both strings are of equal length";
+  }
+}
+
+const dato_Uno = "Hola";
+const dato_Dos = "Mundo";
+const longerString = stringComparision(dato_Uno, dato_Dos);
+console.log(longerString);
+}
+longitud_Larga();
+
+
+//Me puedes ayudar a corregirlo, es que el problema es que aunque la cadena diga "Ho" siempre dice que tiene mas de 10 carcteres: true
+
+/**Ejercicio 3: Verificar si una cadena tiene más de X caracteres:
+ * Escribe una función que determine si una cadena tiene más de un número específico
+ * de caracteres.
+ */
+function tieneMasDeXCaracteres(cadenaaaa, x) {
+    return cadenaaaa.length > x;
+}
+const cadenaaaa = "Hol";
+const x = 10;
+const resultado = tieneMasDeXCaracteres(cadenaaaa, x);
+console.log(`La cadena tiene más de ${x} caracteres: ${resultado}`);
+
+
+/** EJERCICIO 4: Eliminar espacios y contar caracteres:
+ * Crea una función que elimine los espacios de una cadena
+ * y devuelva su nueva longitud.
+ */
+function retirar_espacios(sinEspacios) {
+    const quitar_Espacios = sinEspacios.replace(/\s/g, '');
+    return quitar_Espacios.length;
+}
+let ciclo = "Esta es una frase con muchos espacios";
+let nueva_lista = retirar_espacios(ciclo);
+console.log(nueva_lista);
+
+
+/** EJERCICIO 5: Determinar si una cadena está vacía
+ * Escribe una función que devuelva `true` si la cadena está vacía (`.length === 0`) y
+ *  `false` en caso contrario.
+ */
+function sucesion_Vacia () {
+    let cadena = "";
+    if (cadena.length === 0) {
+        console.log("La cadenba esta vacia");
+    } else {
+        console.log("La cadena no esta vacia");
+    }
+}
+sucesion_Vacia();
+
+
+
+/** EJERCICIO INTERMEDIO */
+
+/** EJERCICIO 1: Calcular la longitud promedio de palabras en una oración:
+ * Escribe una función que reciba una oración y devuelva el promedio de caracteres
+ *  por palabra.
+ */
+
