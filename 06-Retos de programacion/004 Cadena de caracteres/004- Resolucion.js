@@ -515,4 +515,7 @@ sucesion_Vacia();
  * Escribe una función que reciba una oración y devuelva el promedio de caracteres
  *  por palabra.
  */
+function promedio () {
 
+}
+promedio ();
