@@ -11,7 +11,7 @@
 
 
 
-                          // Acceso a caracteres específicos
+// Acceso a caracteres específicos
 const cadena = "Hola, JavaScript!";
 console.log(cadena[0]);  // 'H'
 console.log(cadena.charAt(4));  // ','
@@ -24,7 +24,7 @@ console.log(cadena.charAt(4));  // ','
 function obtenerPrimerCaracter(cadena) {
     return cadena[0];
 }
-    console.log(obtenerPrimerCaracter("Maria"));
+console.log(obtenerPrimerCaracter("Maria"));
 
 
 /** EJERCICIO 2: Obtener el último carácter de una cadena:
@@ -43,20 +43,20 @@ console.log(obtenerUltimoCaracter("Tienda de Abarrotes")); // "s"
 function obtenerPrimerCaracter(cadena) {
     return cadena[2];
 }
-    console.log(obtenerPrimerCaracter("Maria"));
+console.log(obtenerPrimerCaracter("Maria"));
 
 
 
-    /// EJERCICIOS INTERMEDIOS ///
+/// EJERCICIOS INTERMEDIOS ///
 
 /** EJERCICIO 1: Reemplazar el segundo carácter por un asterisco:
  * Escribe una función que reciba una cadena y devuelva una nueva cadena
  * donde el segundo carácter sea reemplazado por *
  */
-function reemplazo (){
-const str = 'JavaScript';
-const nuevaStr = str[0] + '*' + str.slice(2); // str[0] → Primer caracter //'*' → reemplazo  //str,slice(2) → del tercer caracter en adelante
-console.log(nuevaStr);
+function reemplazo() {
+    const str = 'JavaScript';
+    const nuevaStr = str[0] + '*' + str.slice(2); // str[0] → Primer caracter //'*' → reemplazo  //str,slice(2) → del tercer caracter en adelante
+    console.log(nuevaStr);
 }
 reemplazo();
 
@@ -66,7 +66,7 @@ reemplazo();
  * de lo contrario, false.
  */
 
-function verificacion (comprobacion){
+function verificacion(comprobacion) {
     return /^123/.test(comprobacion);
 }
 console.log(verificacion("123Hola"));
@@ -152,26 +152,26 @@ console.log(intercambiar("A"));
 
 
 
-                   // SUBCADENA
+// SUBCADENA
 /** Es un metodo de STRINg devuelve la parte de esta cadena desde el indice inicial
  * hasta el indice final
  */
-                 // SINTAXIS
-         /** substring(indexStart)
-          *  substring(indexStart, indexEnd)
-          */
+// SINTAXIS
+/** substring(indexStart)
+ *  substring(indexStart, indexEnd)
+ */
 
 // Ejemplo
 const str = "Mozilla";
-console.log(str.substring(1,3)); // Salida → oz
+console.log(str.substring(1, 3)); // Salida → oz
 console.log(str.substring(2));  // Salida → zilla
 
 
 /** USO DE substring() con propiedad de longuitud*/
 /** Ejemplo: Extraer los ultimos caracteres de una cadena especifica */
 const text = "Mozilla";
-console.log(text.substring(text.length -4));  // illa → Empieza contar desde el ultimo caracter al primero
-console.log(text.substring(text.length -5)); // zilla
+console.log(text.substring(text.length - 4));  // illa → Empieza contar desde el ultimo caracter al primero
+console.log(text.substring(text.length - 5)); // zilla
 
 
 
@@ -180,8 +180,8 @@ console.log(text.substring(text.length -5)); // zilla
  * slice () → devuelve una cadena vacia
  */
 const text1 = "Mozilla";
-console.log(text1.substring(5,2));  // zil
-console.log(text1.slice(5,2));  // No devuelve nada ya que es una cdena vacia
+console.log(text1.substring(5, 2));  // zil
+console.log(text1.slice(5, 2));  // No devuelve nada ya que es una cdena vacia
 
 /** Si uno o ambos argumentos son negativos o NAN, el SUBSTRING los trata como si fuera 0
  */
@@ -202,15 +202,15 @@ console.log(text.slice(-5, -2)); // "zil"
  * Reemplazar tanto caracteres individuales como subcadenas
  */
 function replaceString(viejo, nuevo, completo) {
-  for (let i = 0; i < completo.length; ++i) {
-    if (completo.substring(i, i + viejo.length) === viejo) {
-      completo =
-        completo.substring(0, i) +
-        nuevo +
-        completo.substring(i + viejo.length, completo.length);
+    for (let i = 0; i < completo.length; ++i) {
+        if (completo.substring(i, i + viejo.length) === viejo) {
+            completo =
+                completo.substring(0, i) +
+                nuevo +
+                completo.substring(i + viejo.length, completo.length);
+        }
     }
-  }
-  return completo;
+    return completo;
 }
 
 replaceString("World", "Web", "Brave New World");
@@ -222,16 +222,16 @@ replaceString("World", "Web", "Brave New World");
  * Extraer la subcadena "Hola" de la cadena "Hola Mundo" usando el método `slice`
  */
 function extraer_Cadena() {
-const contenido = "Hola Mundo";
-const resultado = contenido.slice(0,5);
-console.log(resultado);
+    const contenido = "Hola Mundo";
+    const resultado = contenido.slice(0, 5);
+    console.log(resultado);
 }
 extraer_Cadena(); //Hola
 
 /** EJERCICIO 2: Verificar
  * Verificar si la cadena "JavaScript" contiene la subcadena "Script" usando un método adecuado.
  */
-function contenido () {
+function contenido() {
     let cadena = "Hola, Sofia";
     let subcadena = "Sofia";
     console.log(cadena.includes(subcadena)); //true
@@ -242,17 +242,17 @@ contenido();
  * Encontrar la posición de la primera aparición de la subcadena "lo" en la cadena
  * "Hola Mundo
  */
-function posicion () {
-let cadena_Original = "Hola, Mundo";
-let cadena_Segunda = "ol";
-console.log(cadena_Original.indexOf(cadena_Segunda)); // 1
+function posicion() {
+    let cadena_Original = "Hola, Mundo";
+    let cadena_Segunda = "ol";
+    console.log(cadena_Original.indexOf(cadena_Segunda)); // 1
 }
 posicion();
 
 /** EJERCICIO 4: Dividir la cadena
  * Dividir la cadena "Hola Mundo" en palabras individuales.
 */
-function dividir () {
+function dividir() {
     let mensaje = "Hola Mundo";
     console.log(mensaje.split('')); // ['H', 'o', 'l', 'a', ' ', 'M', 'u', 'n', 'd', 'o']
 }
@@ -265,8 +265,8 @@ dividir();
 // substr → Devuelve los  caractreres de una cadena que comienza en una localizacion especifica
 // Sintaxis → cadena.substr(inicio[, longitud])
 function extraer() {
-let extrar_Caracteres = "Programacion";
-console.log("(0,3): " + extrar_Caracteres.substr(0,3)); //Pro
+    let extrar_Caracteres = "Programacion";
+    console.log("(0,3): " + extrar_Caracteres.substr(0, 3)); //Pro
 }
 extraer();
 
@@ -278,9 +278,9 @@ extraer();
 /** EJERCICIO 1: Extraer la subcadena
  * Extraer la subcadena "Mundo" de la cadena "Hola Mundo" usando el método `substring
  */
-function sacar_contenido(){
-const contenido1 = "Hola Mundo";
-console.log(contenido1.substring(0,5)); // Hola
+function sacar_contenido() {
+    const contenido1 = "Hola Mundo";
+    console.log(contenido1.substring(0, 5)); // Hola
 }
 sacar_contenido();
 
@@ -288,9 +288,9 @@ sacar_contenido();
 /** EJERCICIO 2: Crear una función que reciba una cadena y devuelva una nueva cadena
  * Crear una función que reciba una cadena y devuelva una nueva cadena con los primeros 5 caracteres eliminados.
  */
-function devolver_Cadena (){
+function devolver_Cadena() {
     const dato = "cadena original";
-    const eliminacion_Caracteres = dato.slice (5); //adena ori
+    const eliminacion_Caracteres = dato.slice(5); //adena ori
     console.log(eliminacion_Caracteres);
 }
 devolver_Cadena();
@@ -300,16 +300,16 @@ devolver_Cadena();
  * Encontrar todas las posiciones donde aparece la subcadena "ab" en la cadena "abcabcabc
  */
 function posiciones_cadena(original_posiciones, subcadena_posiciones) { //Se crea la funcion con los parametros de la cadena original y la subcaden
-  const indices = [];  //Se crea una variable con un arreglo vacio
-  let index = original_posiciones.indexOf(subcadena_posiciones); // se crea la variable de indice y se busca en la subcadena por medio de indexOf
-  while (index !== -1) { // Se hace un ciclo while en donde el index se veriifca la posicion en -1
-    indices.push(index); //Se manda a llamar la variable de indices y con push  → se utiliza para devolver la longuitud
-    index = original_posiciones.indexOf(subcadena_posiciones, index + 1);  //Se manda a llamar al index en donde se va a a incrememtar en 1 para encontrar las posiciones
-  }
-  return indices; // se retorna los indices
+    const indices = [];  //Se crea una variable con un arreglo vacio
+    let index = original_posiciones.indexOf(subcadena_posiciones); // se crea la variable de indice y se busca en la subcadena por medio de indexOf
+    while (index !== -1) { // Se hace un ciclo while en donde el index se veriifca la posicion en -1
+        indices.push(index); //Se manda a llamar la variable de indices y con push  → se utiliza para devolver la longuitud
+        index = original_posiciones.indexOf(subcadena_posiciones, index + 1);  //Se manda a llamar al index en donde se va a a incrememtar en 1 para encontrar las posiciones
+    }
+    return indices; // se retorna los indices
 }
-const cadena_OriginalPosiciones= "abcabcabcabc"; // Se crea la varible para poder agregar el valor que es abcabcabcabc
-const encontrar_Posiciones= "ab"; //Se crea otra variable para encontra el valor de ab que se quiere buscar
+const cadena_OriginalPosiciones = "abcabcabcabc"; // Se crea la varible para poder agregar el valor que es abcabcabcabc
+const encontrar_Posiciones = "ab"; //Se crea otra variable para encontra el valor de ab que se quiere buscar
 const colocacion = posiciones_cadena(cadena_OriginalPosiciones, encontrar_Posiciones); //Se crea una variable para poder mandar a llamar la cadena original y el valor que se quiere buscar
 console.log(colocacion); //Se manda a llamar la variable en donde estan las otras cadenas con los valores, para poder imprimir
 
@@ -317,8 +317,8 @@ console.log(colocacion); //Se manda a llamar la variable en donde estan las otra
 /** EJERCICIO 4:
  * Crear una función que reciba una cadena y devuelva la subcadena más larga que no contenga caracteres repetidos.
  */
-function no_Repetidos (elementos){
-return [...new Set(elementos)].join('');
+function no_Repetidos(elementos) {
+    return [...new Set(elementos)].join('');
 }
 const cadena_OriginalRepetidos = "Seestarecibiendounacadenaconcaracteresrepetidos";
 const cadena_ElimancionRepetidos = no_Repetidos(cadena_OriginalRepetidos);
@@ -329,8 +329,8 @@ console.log(cadena_ElimancionRepetidos); //Sestarcibndoup
  * Extraer la subcadena "Java" de la cadena "JavaScript" usando el método `substr`
  */
 function sacar() {
-const subcadena_Extaer = "JavaScript";
-console.log(subcadena_Extaer. substring(0,4));
+    const subcadena_Extaer = "JavaScript";
+    console.log(subcadena_Extaer.substring(0, 4));
 }
 sacar();
 
@@ -343,15 +343,13 @@ sacar();
  * Extraer todas las subcadenas de longitud 3 de la cadena "abcdef".
  */
 function extraer() {
-let extrar_Caracteres = "abcdef";
-console.log("(0,3): " + extrar_Caracteres.substring(0,3));
-console.log("(1,4): " + extrar_Caracteres.substring(1,4));
-console.log("(2,5): " + extrar_Caracteres.substring(2,5));
-console.log("(3,6): " + extrar_Caracteres.substring(3,6));
+    let extrar_Caracteres = "abcdef";
+    console.log("(0,3): " + extrar_Caracteres.substring(0, 3));
+    console.log("(1,4): " + extrar_Caracteres.substring(1, 4));
+    console.log("(2,5): " + extrar_Caracteres.substring(2, 5));
+    console.log("(3,6): " + extrar_Caracteres.substring(3, 6));
 }
 extraer();
-
-
 
 /** EJERCICIO 2:
  * Crear una función que reciba dos cadenas
@@ -371,16 +369,13 @@ function subcadenaMasLarga(str1, str2) {
 }
 console.log(subcadenaMasLarga("Search", "Searchhello"));
 
-
 /** EJERCICIO 3: Dividir la cadena
  * Dividir la cadena "Hola Mundo" en subcadenas de longitud 2.
  */
-
-
 function dividir_longitud() {
     let dividir_Dos = "Hola Mundo";
     for (let i = 0; i < dividir_Dos.length; i += 2) {
-        console.log(`(${i},${i+2}): ` + dividir_Dos.substring(i, i + 2));
+        console.log(`(${i},${i + 2}): ` + dividir_Dos.substring(i, i + 2));
     }
 }
 dividir_longitud();
@@ -389,16 +384,16 @@ dividir_longitud();
 /** EJERCICIO 4: Encontsr todas las cadenas
  *  Encontrar todas las subcadenas únicas de la cadena "abcabc"
  */
-function cadenas_Unicas () {
-    let encontar_Cadenas =" abcabc";
-    console.log("(0,4): " + encontar_Cadenas.substring(0,4));
-    console.log("(0,5): " + encontar_Cadenas.substring(0,5));
-    console.log("(0,6): " + encontar_Cadenas.substring(0,6));
-    console.log("(1,3): " + encontar_Cadenas.substring(1,3));
-    console.log("(2,4): " + encontar_Cadenas.substring(2,4));
-    console.log("(3,5): " + encontar_Cadenas.substring(3,5));
-    console.log("(4,6): " + encontar_Cadenas.substring(4,6));
-    console.log("(5,6): " + encontar_Cadenas.substring(5,6));
+function cadenas_Unicas() {
+    let encontar_Cadenas = " abcabc";
+    console.log("(0,4): " + encontar_Cadenas.substring(0, 4));
+    console.log("(0,5): " + encontar_Cadenas.substring(0, 5));
+    console.log("(0,6): " + encontar_Cadenas.substring(0, 6));
+    console.log("(1,3): " + encontar_Cadenas.substring(1, 3));
+    console.log("(2,4): " + encontar_Cadenas.substring(2, 4));
+    console.log("(3,5): " + encontar_Cadenas.substring(3, 5));
+    console.log("(4,6): " + encontar_Cadenas.substring(4, 6));
+    console.log("(5,6): " + encontar_Cadenas.substring(5, 6));
 
 }
 cadenas_Unicas()
@@ -408,11 +403,11 @@ cadenas_Unicas()
  * Crear una función que reciba una cadena y devuelva una nueva donde el primer
  * y último carácter hayan sido intercambiados.
  */
-function intercambiar_Caractereres(serie){
-let primer_cambio = serie[0];
-let segundo_Cambio = serie[serie.length -1];
-let original_Cadena = segundo_Cambio + serie.slice(1, -1) + primer_cambio;
-return original_Cadena;
+function intercambiar_Caractereres(serie) {
+    let primer_cambio = serie[0];
+    let segundo_Cambio = serie[serie.length - 1];
+    let original_Cadena = segundo_Cambio + serie.slice(1, -1) + primer_cambio;
+    return original_Cadena;
 }
 console.log(intercambiar_Caractereres("Paleteria"));
 console.log(intercambiar_Caractereres("Montes"));
@@ -422,12 +417,12 @@ console.log(intercambiar_Caractereres("Montes"));
 
 
 
-            // LONGUITUD → length
+// LONGUITUD → length
 /** Es un objeto string que representa la longuitud de una cadena, en unidades
  */
-                 // SINTAXIS
-         /** str.length
-          */
+// SINTAXIS
+/** str.length
+ */
 
 
 /** EJERCICIO FACIL */
@@ -437,7 +432,7 @@ console.log(intercambiar_Caractereres("Montes"));
  * utilizando `.length
  */
 function stringLength(longitud) {
-  return longitud.length;
+    return longitud.length;
 }
 let myString = "Hello, world!";
 let length = stringLength(myString);
@@ -446,26 +441,23 @@ console.log(length); //  13
 /** EJERCICIO 2: Comparar dos cadenas por longitud:
  * Crea una función que compare dos cadenas y devuelva cuál es más larga.
  */
-function longitud_Larga (){
-function stringComparision(number_0ne,number_Two) {
-  if (number_0ne.length > number_Two.length) {
-    return number_0ne;
-  } else if (number_Two.length > number_0ne.length) {
-    return number_Two;
-  } else {
-    return "Both strings are of equal length";
-  }
-}
+function longitud_Larga() {
+    function stringComparision(number_0ne, number_Two) {
+        if (number_0ne.length > number_Two.length) {
+            return number_0ne;
+        } else if (number_Two.length > number_0ne.length) {
+            return number_Two;
+        } else {
+            return "Both strings are of equal length";
+        }
+    }
 
-const dato_Uno = "Hola";
-const dato_Dos = "Mundo";
-const longerString = stringComparision(dato_Uno, dato_Dos);
-console.log(longerString);
+    const dato_Uno = "Hola";
+    const dato_Dos = "Mundo";
+    const longerString = stringComparision(dato_Uno, dato_Dos);
+    console.log(longerString);
 }
 longitud_Larga();
-
-
-//Me puedes ayudar a corregirlo, es que el problema es que aunque la cadena diga "Ho" siempre dice que tiene mas de 10 carcteres: true
 
 /**Ejercicio 3: Verificar si una cadena tiene más de X caracteres:
  * Escribe una función que determine si una cadena tiene más de un número específico
@@ -479,7 +471,6 @@ const x = 10;
 const resultado = tieneMasDeXCaracteres(cadenaaaa, x);
 console.log(`La cadena tiene más de ${x} caracteres: ${resultado}`);
 
-
 /** EJERCICIO 4: Eliminar espacios y contar caracteres:
  * Crea una función que elimine los espacios de una cadena
  * y devuelva su nueva longitud.
@@ -492,20 +483,20 @@ let ciclo = "Esta es una frase con muchos espacios";
 let nueva_lista = retirar_espacios(ciclo);
 console.log(nueva_lista);
 
-
 /** EJERCICIO 5: Determinar si una cadena está vacía
  * Escribe una función que devuelva `true` si la cadena está vacía (`.length === 0`) y
  *  `false` en caso contrario.
  */
-function sucesion_Vacia () {
+function sucesion_Vacia() {
     let cadena = "";
     if (cadena.length === 0) {
-        console.log("La cadenba esta vacia");
+        console.log("La cadena esta vacia");
     } else {
         console.log("La cadena no esta vacia");
     }
 }
 sucesion_Vacia();
+
 
 
 
@@ -515,7 +506,54 @@ sucesion_Vacia();
  * Escribe una función que reciba una oración y devuelva el promedio de caracteres
  *  por palabra.
  */
-function promedio () {
-
+function promedio() {
+    let longuitud_oracion = 'Esta sola';
+    let oracion = longuitud_oracion.split(' ').length;
+    console.log("La cadena consta de " + oracion + " palabras");
 }
-promedio ();
+promedio();
+
+/**EJERCICIO 2: Encontrar la palabra más larga
+ * Crea una función que reciba una oración y devuelva la longitud de su palabra
+ * más larga.
+ */
+ function longitud_palabra(frase) {
+  const texto = frase.split(' ');
+  let longitud_Extensa = 0;
+  for (let i = 0; i < texto.length; i++) {
+    const largo_Palabra = texto[i].length;
+    if (largo_Palabra > longitud_Extensa) {
+      longitud_Extensa = largo_Palabra;
+    }
+  }
+  return longitud_Extensa;
+}
+const frase = "En esta oracion se debe encontra la palabra mas larga";
+const distancia = longitud_palabra(frase);
+console.log("La longitud de la palabra más larga es:", distancia);
+
+/** EJERCICIO 3: Reducir una cadena a un máximo de caracteres:
+ * Escribe una función que limite la longitud de una cadena a un número específico
+ * y devuelva el resultado.
+ */
+
+
+/** EJERCICIO 4: Comparar la longitud total de dos frases:
+ * Desarrolla una función que reciba dos frases y devuelva cuál tiene más caracteres
+ * en total.
+ */
+function frase_larga(fraseuno, frasedos){
+    if(fraseuno.length > frasedos.length) {
+        return `La primera frase es mas larga con ${fraseuno.length} caracteres `;
+    } else if (frasedos.length > fraseuno.length) {
+        return `La segunda frase es mas larga con ${frasedos.length} caracteres `;
+    } else {
+        return "Ambas frases tiene la misma longuitud";
+    }
+}
+console.log(frase_larga("Bienvenidos", "A la paleteria"));
+
+/** EJERCICIO 5: *Eliminar caracteres impares y contar la nueva longitud
+ * Crea una función que elimine los caracteres en posiciones impares
+ * y devuelva la longitud de la nueva cadena.
+ */
