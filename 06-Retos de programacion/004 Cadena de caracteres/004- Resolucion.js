@@ -536,7 +536,14 @@ console.log("La longitud de la palabra más larga es:", distancia);
  * Escribe una función que limite la longitud de una cadena a un número específico
  * y devuelva el resultado.
  */
-
+function limitarCadena(cadena, longitudMaxima) {
+  if (cadena.length <= longitudMaxima) {
+    return cadena;
+  } else {
+    return cadena.slice(0, longitudMaxima);
+  }
+}
+console.log(limitarCadena("Hoy es dia Miercoles", 20));
 
 /** EJERCICIO 4: Comparar la longitud total de dos frases:
  * Desarrolla una función que reciba dos frases y devuelva cuál tiene más caracteres
@@ -556,4 +563,45 @@ console.log(frase_larga("Bienvenidos", "A la paleteria"));
 /** EJERCICIO 5: *Eliminar caracteres impares y contar la nueva longitud
  * Crea una función que elimine los caracteres en posiciones impares
  * y devuelva la longitud de la nueva cadena.
+*/
+function eliminarImparesYContar(componente) {
+  let nuevaCadena = componente.split("").filter((_, i) => i % 2 === 0).join("");
+  return nuevaCadena.length;
+}
+let componente = "Hola, Mundo!";
+let nuevaLongitud = eliminarImparesYContar(componente);
+console.log(`La nueva longitud es: ${nuevaLongitud}`);
+
+
+
+
+/** Dificil */
+
+/** EJERCICIO 1: Truncar una cadena sin cortar palabras
+ * Escribe una función que recorte una cadena a un límite dado sin dividir palabras,
+ *  manteniendo el resultado más cercano posible.
  */
+function truncarSinCortarPalabras(texto, maximo) {
+  let palabras = texto.split(' ');
+  let resultado = '';
+  for (let palabra of palabras) {
+    if ((resultado + palabra).length <= maximo) {
+      resultado += palabra + ' ';
+    } else {
+      break;
+    }
+  }
+  return resultado.trim();
+}
+let texto = 'La mujer paseaba a su perro con ayuda de su amigo';
+let maximo = 18;
+console.log(truncarSinCortarPalabras(texto, maximo));
+
+/** EJERCICIO 2: Extraer las palabras más largas y contar su longitud
+ * Crea una función que identifique las tres palabras más largas de un texto
+ * y devuelva sus respectivas longitudes.
+ */
+function equitar () {
+
+}
+quitar();
