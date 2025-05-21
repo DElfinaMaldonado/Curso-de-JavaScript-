@@ -1,5 +1,5 @@
 
-/** Que es una cdena de caracteres
+/** Que es una cadena de caracteres
  * Es un tipo de datos que representan una secuencia de caracteres que puede
  * consistir de letras, numero, sombolos, palabras o frases.
  */
@@ -9,12 +9,12 @@
  */
 
 
-
-
 // Acceso a caracteres específicos
 const cadena = "Hola, JavaScript!";
 console.log(cadena[0]);  // 'H'
 console.log(cadena.charAt(4));  // ','
+
+
 
 /// EJERCICIOS FACILES ///
 
@@ -380,7 +380,6 @@ function dividir_longitud() {
 }
 dividir_longitud();
 
-
 /** EJERCICIO 4: Encontsr todas las cadenas
  *  Encontrar todas las subcadenas únicas de la cadena "abcabc"
  */
@@ -517,16 +516,16 @@ promedio();
  * Crea una función que reciba una oración y devuelva la longitud de su palabra
  * más larga.
  */
- function longitud_palabra(frase) {
-  const texto = frase.split(' ');
-  let longitud_Extensa = 0;
-  for (let i = 0; i < texto.length; i++) {
-    const largo_Palabra = texto[i].length;
-    if (largo_Palabra > longitud_Extensa) {
-      longitud_Extensa = largo_Palabra;
+function longitud_palabra(frase) {
+    const texto = frase.split(' ');
+    let longitud_Extensa = 0;
+    for (let i = 0; i < texto.length; i++) {
+        const largo_Palabra = texto[i].length;
+        if (largo_Palabra > longitud_Extensa) {
+            longitud_Extensa = largo_Palabra;
+        }
     }
-  }
-  return longitud_Extensa;
+    return longitud_Extensa;
 }
 const frase = "En esta oracion se debe encontra la palabra mas larga";
 const distancia = longitud_palabra(frase);
@@ -537,11 +536,11 @@ console.log("La longitud de la palabra más larga es:", distancia);
  * y devuelva el resultado.
  */
 function limitarCadena(cadena, longitudMaxima) {
-  if (cadena.length <= longitudMaxima) {
-    return cadena;
-  } else {
-    return cadena.slice(0, longitudMaxima);
-  }
+    if (cadena.length <= longitudMaxima) {
+        return cadena;
+    } else {
+        return cadena.slice(0, longitudMaxima);
+    }
 }
 console.log(limitarCadena("Hoy es dia Miercoles", 20));
 
@@ -549,8 +548,8 @@ console.log(limitarCadena("Hoy es dia Miercoles", 20));
  * Desarrolla una función que reciba dos frases y devuelva cuál tiene más caracteres
  * en total.
  */
-function frase_larga(fraseuno, frasedos){
-    if(fraseuno.length > frasedos.length) {
+function frase_larga(fraseuno, frasedos) {
+    if (fraseuno.length > frasedos.length) {
         return `La primera frase es mas larga con ${fraseuno.length} caracteres `;
     } else if (frasedos.length > fraseuno.length) {
         return `La segunda frase es mas larga con ${frasedos.length} caracteres `;
@@ -565,8 +564,8 @@ console.log(frase_larga("Bienvenidos", "A la paleteria"));
  * y devuelva la longitud de la nueva cadena.
 */
 function eliminarImparesYContar(componente) {
-  let nuevaCadena = componente.split("").filter((_, i) => i % 2 === 0).join("");
-  return nuevaCadena.length;
+    let nuevaCadena = componente.split("").filter((_, i) => i % 2 === 0).join("");
+    return nuevaCadena.length;
 }
 let componente = "Hola, Mundo!";
 let nuevaLongitud = eliminarImparesYContar(componente);
@@ -582,16 +581,16 @@ console.log(`La nueva longitud es: ${nuevaLongitud}`);
  *  manteniendo el resultado más cercano posible.
  */
 function truncarSinCortarPalabras(texto, maximo) {
-  let palabras = texto.split(' ');
-  let resultado = '';
-  for (let palabra of palabras) {
-    if ((resultado + palabra).length <= maximo) {
-      resultado += palabra + ' ';
-    } else {
-      break;
+    let palabras = texto.split(' ');
+    let resultado = '';
+    for (let palabra of palabras) {
+        if ((resultado + palabra).length <= maximo) {
+            resultado += palabra + ' ';
+        } else {
+            break;
+        }
     }
-  }
-  return resultado.trim();
+    return resultado.trim();
 }
 let texto = 'La mujer paseaba a su perro con ayuda de su amigo';
 let maximo = 18;
@@ -601,7 +600,152 @@ console.log(truncarSinCortarPalabras(texto, maximo));
  * Crea una función que identifique las tres palabras más largas de un texto
  * y devuelva sus respectivas longitudes.
  */
-function equitar () {
-
+function trucar_Palabras(infomormation, mucho) {
+    let vocablos = infomormation.split(' ');
+    let respuesta = '';
+    for (let vocablo of vocablos) {
+        if ((respuesta + vocablo).length <= mucho) {
+            respuesta += vocablo + ' ';
+        } else {
+            break;
+        }
+    }
+    return respuesta.trim();
 }
-quitar();
+let infomormation = 'El dia de hoy esta muy soleado';
+let mucho = 18;
+console.log(truncarSinCortarPalabras(infomormation, mucho));
+
+
+/** EJERCICIO 3:Encontrar la proporción de caracteres en mayúsculas y minúsculas:
+ *Escribe una función que determine el porcentaje de caracteres en mayúscula frente
+a minúscula en una cadena.
+ */
+
+
+
+
+
+
+// CONCATENACION
+/** Es un metodo que implica unir dos o mas cadenase en una sola.
+ */
+// Unir dos cadena
+let texts1 = "sea";
+let texts2 = "food";
+let resultados_text = texts1.concat(texts2);
+console.log(resultados_text);
+
+// Unir tres cadenas
+let text0ne = "Hello";
+let textDos = "wordl";
+let textTres = "Have a nice day";
+let resultados0 = text0ne.concat(" ", textDos, " ", textTres);
+console.log(resultados0);
+
+// Unir dos matrices
+const constante_One = ["Cecilie", "Lone"];
+const constante_Dos = ["Emil", "Tobias", "Linus"];
+const resultado_Const = constante_One.concat(constante_Dos);
+console.log(resultado_Const);
+
+// Unir tre matrices
+const consta_Tres = ["Cecilie", "Lone"];
+const consta_Cuatro = ["Emil", "Tobias", "Linus"];
+const consta_Cinco = ["Robin"];
+const resultado_Const2 = consta_Tres.concat(consta_Cuatro, consta_Cinco);
+console.log(resultado_Const2);
+
+
+
+
+/** EJERCICIOS FACILES: **/
+
+/** EJERCICICO 1:
+ * Escribe una función que reciba dos cadenas y las concatene con un espacio
+ * en medio utilizando `+`
+ */
+function concatenarStrings(str1, str2) {
+  return str1 + str2;
+}
+let saludo = "Hola";
+let nombre = "Mundo";
+let mensajeCompleto = concatenarStrings(saludo, nombre);
+console.log(mensajeCompleto);
+
+/** EJERCICIO 2:
+ * Crea una función que reciba un nombre y un apellido, y devuelva el nombre completo
+ *  concatenado con un espacio en medio.
+ */
+function nomberApellido(nombree, apellido) {
+  return nombree + " " +apellido;
+}
+let nombree = "Juana";
+let apellido = "Perez";
+let nombreCompleto = nomberApellido(nombree, apellido);
+console.log(nombreCompleto);
+
+/** EJERCICIO 3:
+ * Escribir una funcion que reciba una cadena y un numero, y concatene la cadena
+ * con el numero convertido a texto
+ */
+function concatenar_Cadena(enlace, cifra) {
+    return enlace + " " + String(cifra);
+}
+let enlace = "La cadena de texto a concatenar";
+let cifra = 123456;
+let producto = concatenar_Cadena(enlace, cifra);
+console.log(producto);
+
+/** EJERCICIO 4:
+ * Crea una función que reciba dos cadenas y las concatene con un guion (`-`)
+ * en medio.
+ */
+function contaner_guion (enlace1, enlace2) {
+    return enlace1 + " - " + enlace2;
+}
+let enlace1 = "Hoy es";
+let enlace2 = "Miercoles";
+let conclusion = contaner_guion(enlace1, enlace2);
+console.log(conclusion);
+
+/** EJERICIO 5:
+ * Escribe una función que reciba una palabra y le agregue la palabra "JavaScript"
+ * al final utilizando `+`
+ */
+function agregar_palabra (lengua){
+    return lengua;
+}
+let lengua = "programacion";
+let solucion = agregar_palabra(lengua + " " + "JavaScript");
+console.log(solucion);
+
+
+
+/** EJERCICIOS INTERMEDIOS: **/
+
+/** EJERCICIOS 1:
+ * Crea una función que reciba tres palabras y forme una oración utilizando
+ * **template literals** (`${}`)
+ */
+
+function template(firstName,lastName, middleName) {
+    return firstName + lastName + middleName;
+}
+let firstName = "John";
+let lastName = "Doe";
+let middleName = "Cameron";
+let texttt = `${firstName}, ${lastName}, ${middleName}`;
+console.log(texttt);
+
+/** EJERCICIO 2:
+ * Escribe una función que reciba un nombre y una edad, y devuelva una frase
+ * como: "Mi nombre es [nombre] y tengo [edad] años.
+ */
+function datos(llamar,  ...años) {
+    return llamar + años;
+}
+const llamar= "Felipe";
+const años = 23;
+const datos = `Mi nombre es ${nombre1}, y tengo ${años}.`;
+console.log(datos);
