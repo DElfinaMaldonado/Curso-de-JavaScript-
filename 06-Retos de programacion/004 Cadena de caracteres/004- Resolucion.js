@@ -742,10 +742,181 @@ console.log(texttt);
  * Escribe una función que reciba un nombre y una edad, y devuelva una frase
  * como: "Mi nombre es [nombre] y tengo [edad] años.
  */
-function datos(llamar,  ...años) {
-    return llamar + años;
+function datos(nombreee, añoss) {
+    return "Mi nombre es " + nombreee + " y teng " + añoss + " años. ";
 }
-const llamar= "Felipe";
-const años = 23;
-const datos = `Mi nombre es ${nombre1}, y tengo ${años}.`;
-console.log(datos);
+const nombreee= "Felipe";
+const añoss= 23;
+const respuesta_datos = datos(nombreee, añoss);
+console.log(respuesta_datos);
+
+/** EJERCICIO 3:
+ * Crea una función que reciba un nombre, un apellido y una ciudad, y
+ * devuelva una presentación como: "Hola, soy [nombre] [apellido] y vivo en [ciudad]."
+ */
+
+function referencias(nombradia, sobrenombre, ciudad){
+    return " Hola soy " + nombradia + sobrenombre + " y vivo en " + ciudad;
+}
+const nombradia = "Jorge";
+const sobrebnombre = " Campos";
+const ciudad = "CDMX";
+const replica = referencias(nombradia, sobrebnombre, ciudad);
+console.log(replica);
+
+/** EJERCICIO 4:
+ * Escribe una función que reciba dos cadenas y un número, y devuelva una frase
+ * como: "La cadena [cadena1] concatenada con [cadena2] tiene una longitud de [número].
+ */
+function concatenar_Cadenas(tipoone, tipotwo) {
+    const cadenaConcatenada = tipoone + " " + tipotwo;
+    return `La cadena "${tipoone}" concatenada con "${tipotwo}" tiene una longitud de ${cadenaConcatenada.length}.`;
+}
+const tipoone = "Hoy es";
+const tipotwo = "Jueves";
+const fruto = concatenar_Cadenas(tipoone, tipotwo);
+console.log(fruto);
+
+/** EJercicio 5:
+ * Crea una función que reciba una palabra y un número, y devuelva la palabra
+ * repetida el número de veces indicado, separada por espacios.
+ */
+function indicador(juramento, importe) {
+    return Array(importe).fill(juramento).join(" ");
+}
+console.log(indicador("Hola", 3));
+
+
+/** EJERCICIOS DIFICILES */
+
+/** EJERCICIO 1:
+ * Desarrolla una función que reciba un arreglo de palabras y las una en una sola
+ *  cadena separadas por una coma y un espacio utilizando `.join()`
+ */
+function unir (){
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+return fruits.join(", ");
+}
+console.log(unir());
+
+/** EJERCICIO 2:
+ * Escribe una función que reciba un arreglo de números y devuelva una cadena con los números separados
+ * por guiones (`-`)
+ */
+function unir2 (grupo){
+    return  grupo.join(" - ") ;
+}
+const grupo= [1,2,3,4,5,6,7,8,9];
+const resultados = unir2(grupo);
+console.log(resultados);
+
+/**EJERCICIO 3:
+ * Crea una función que reciba un arreglo de palabras y un carácter, y las concatene separándolas
+ * por ese carácter
+ */
+function unir3 (grupo2, simbolo){
+    return  grupo2.join(simbolo) ;
+}
+const grupo2= [1,2,3,4,5,6,7,8,9];
+const simbolo = "#";
+const efecto = unir3(grupo2, simbolo);
+console.log(efecto);
+
+/** EJERCICIO 4:
+ *  Escribe una función que reciba un arreglo de cadenas y devuelva una sola cadena donde cada palabra
+ *  esté entre comillas dobles (`"palabra"`), separadas por comas.
+ */
+function doble_Comilla(arreglo) {
+    return arreglo.map(palabra => `"${palabra}"`).join(", ");
+}
+const palabras = ["auto", "camion", "moto", "barco"];
+const objetivo = doble_Comilla(palabras);
+console.log(objetivo);
+
+/** EJERCICIO 5:
+ * Desarrolla una función que reciba un arreglo de objetos con propiedades `nombre` y `edad`, y devuelva
+ * una cadena con frases como: "Nombre: [nombre], Edad: [edad]
+ */
+function propiedades (fama,era) {
+    return " Nombre: " + fama + " , Edad: " + era;
+}
+const fama =  "Araceli";
+const era = 24;
+const obtencion = propiedades(fama, era);
+console.log(obtencion);
+
+
+
+// REPETICION
+/** Es un metodo que devuelve una cadena que contiene la cantidad especifica de copias de esta cadena,
+ * concatenadas entre si.
+ *
+ * SINTAXIS:
+ * repeat(count)
+ */
+
+/**EJEMPLOS */
+let textT = "Hello world!";
+let result = textT.repeat(2);
+console.log(result);
+
+let textT2 = " Hoy es Jueves ";
+let resultado_textT2 = textT2.repeat(4);
+console.log(resultado_textT2);
+
+
+/** EJERCICIOS FACILES */
+
+/** EJERCICIO 1: Repite un símbolo específico
+ * Repite un símbolo específico Crea una función que reciba un símbolo y un número,
+ * y devuelva una cadena con el símbolo repetido.
+ */
+
+function repetirSimbolo(simbolo, cantidad) {
+    return simbolo.repeat(cantidad);
+}
+console.log(repetirSimbolo('#', 5));
+
+/** EJERCICIO 2: Repite un número
+ * Desarrolla una función que repita un número determinado de veces.
+ */
+function repeatNumber(num, times) {
+  return num.toString().repeat(times);
+}
+console.log(repeatNumber(5, 4));
+
+/** EJERCICIO 3: Repite un mensaje de saludo
+ * Crea una función que reciba un saludo y lo repita varias veces.
+ */
+function repetir_Saludo(saludo, reproducción) {
+    return saludo.repeat(reproducción);
+}
+console.log(repetir_Saludo(" Hola Mundo ", 3));
+
+/** EJERCICIO 4:
+ * Repite un emoji
+ * Crea una función que tome un emoji y lo repita la cantidad indicada.
+ */
+function repetir_Emoji(emoji, copia) {
+    return emoji.repeat(copia);
+}
+console.log(repetir_Emoji("<3", 2));
+
+/** EJERCICIO 5: Repite una línea de texto
+ * Haz que una función tome una línea de texto y la repita.
+ */
+function repetir_Texto(escrito, insistir) {
+    return escrito.repeat(insistir);
+}
+console.log(repetir_Texto(" texto ", 5));
+
+
+
+
+/** EJERCICIOS INTERMEDIOS */
+
+/** EJERCICIO 1: Repite palabras dentro de una frase
+ * Escribe una función que tome una frase y repita cada palabra una cantidad específica de veces.
+ */
+
+
