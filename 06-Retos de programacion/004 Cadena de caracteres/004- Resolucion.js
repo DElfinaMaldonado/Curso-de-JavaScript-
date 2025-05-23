@@ -666,7 +666,7 @@ console.log(resultado_Const2);
  * en medio utilizando `+`
  */
 function concatenarStrings(str1, str2) {
-  return str1 + str2;
+    return str1 + str2;
 }
 let saludo = "Hola";
 let nombre = "Mundo";
@@ -678,7 +678,7 @@ console.log(mensajeCompleto);
  *  concatenado con un espacio en medio.
  */
 function nomberApellido(nombree, apellido) {
-  return nombree + " " +apellido;
+    return nombree + " " + apellido;
 }
 let nombree = "Juana";
 let apellido = "Perez";
@@ -701,7 +701,7 @@ console.log(producto);
  * Crea una función que reciba dos cadenas y las concatene con un guion (`-`)
  * en medio.
  */
-function contaner_guion (enlace1, enlace2) {
+function contaner_guion(enlace1, enlace2) {
     return enlace1 + " - " + enlace2;
 }
 let enlace1 = "Hoy es";
@@ -713,7 +713,7 @@ console.log(conclusion);
  * Escribe una función que reciba una palabra y le agregue la palabra "JavaScript"
  * al final utilizando `+`
  */
-function agregar_palabra (lengua){
+function agregar_palabra(lengua) {
     return lengua;
 }
 let lengua = "programacion";
@@ -729,7 +729,7 @@ console.log(solucion);
  * **template literals** (`${}`)
  */
 
-function template(firstName,lastName, middleName) {
+function template(firstName, lastName, middleName) {
     return firstName + lastName + middleName;
 }
 let firstName = "John";
@@ -745,8 +745,8 @@ console.log(texttt);
 function datos(nombreee, añoss) {
     return "Mi nombre es " + nombreee + " y teng " + añoss + " años. ";
 }
-const nombreee= "Felipe";
-const añoss= 23;
+const nombreee = "Felipe";
+const añoss = 23;
 const respuesta_datos = datos(nombreee, añoss);
 console.log(respuesta_datos);
 
@@ -755,7 +755,7 @@ console.log(respuesta_datos);
  * devuelva una presentación como: "Hola, soy [nombre] [apellido] y vivo en [ciudad]."
  */
 
-function referencias(nombradia, sobrenombre, ciudad){
+function referencias(nombradia, sobrenombre, ciudad) {
     return " Hola soy " + nombradia + sobrenombre + " y vivo en " + ciudad;
 }
 const nombradia = "Jorge";
@@ -793,9 +793,9 @@ console.log(indicador("Hola", 3));
  * Desarrolla una función que reciba un arreglo de palabras y las una en una sola
  *  cadena separadas por una coma y un espacio utilizando `.join()`
  */
-function unir (){
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-return fruits.join(", ");
+function unir() {
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    return fruits.join(", ");
 }
 console.log(unir());
 
@@ -803,10 +803,10 @@ console.log(unir());
  * Escribe una función que reciba un arreglo de números y devuelva una cadena con los números separados
  * por guiones (`-`)
  */
-function unir2 (grupo){
-    return  grupo.join(" - ") ;
+function unir2(grupo) {
+    return grupo.join(" - ");
 }
-const grupo= [1,2,3,4,5,6,7,8,9];
+const grupo = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const resultados = unir2(grupo);
 console.log(resultados);
 
@@ -814,10 +814,10 @@ console.log(resultados);
  * Crea una función que reciba un arreglo de palabras y un carácter, y las concatene separándolas
  * por ese carácter
  */
-function unir3 (grupo2, simbolo){
-    return  grupo2.join(simbolo) ;
+function unir3(grupo2, simbolo) {
+    return grupo2.join(simbolo);
 }
-const grupo2= [1,2,3,4,5,6,7,8,9];
+const grupo2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const simbolo = "#";
 const efecto = unir3(grupo2, simbolo);
 console.log(efecto);
@@ -837,10 +837,10 @@ console.log(objetivo);
  * Desarrolla una función que reciba un arreglo de objetos con propiedades `nombre` y `edad`, y devuelva
  * una cadena con frases como: "Nombre: [nombre], Edad: [edad]
  */
-function propiedades (fama,era) {
+function propiedades(fama, era) {
     return " Nombre: " + fama + " , Edad: " + era;
 }
-const fama =  "Araceli";
+const fama = "Araceli";
 const era = 24;
 const obtencion = propiedades(fama, era);
 console.log(obtencion);
@@ -865,6 +865,7 @@ let resultado_textT2 = textT2.repeat(4);
 console.log(resultado_textT2);
 
 
+
 /** EJERCICIOS FACILES */
 
 /** EJERCICIO 1: Repite un símbolo específico
@@ -881,7 +882,7 @@ console.log(repetirSimbolo('#', 5));
  * Desarrolla una función que repita un número determinado de veces.
  */
 function repeatNumber(num, times) {
-  return num.toString().repeat(times);
+    return num.toString().repeat(times);
 }
 console.log(repeatNumber(5, 4));
 
@@ -918,5 +919,90 @@ console.log(repetir_Texto(" texto ", 5));
 /** EJERCICIO 1: Repite palabras dentro de una frase
  * Escribe una función que tome una frase y repita cada palabra una cantidad específica de veces.
  */
+function repetirPalabras(frase, cantidad) {
+    const palabras = frase.split(" ");
+    const resultado = palabras.map(palabra => palabra.repeat(cantidad));
+    return resultado.join(" ");
+}
+const frase_Original = " Hoy es Viernes ";
+const cantidad_Repeticiones = 3;
+const frase_Modificada = repetirPalabras(frase_Original, cantidad_Repeticiones);
+console.log(frase_Modificada);
+
+/** EJERCICIO 2: Repite un mensaje formateado
+ * Diseña una función que reciba una cadena con formato y la repita agregando
+ *  un separador.
+ */
+function mensaje_Formateado(mensaje, veces, separador) {
+    return Array(veces).fill(mensaje).join(separador);
+}
+console.log(mensaje_Formateado("Hola", 3, " - "));
+
+/** EJERICIO 3: Repite elementos de un arreglo de números
+ *  Crea una función que reciba un arreglo de números y los repita en
+ * una nueva estructura.
+ */
+function repetir_Elementos(arr, ocasiones) {
+    const resultado = [];
+    for (const elemento of arr) {
+        for (let i = 0; i < ocasiones; i++) {
+            resultado.push(elemento);
+        }
+    }
+    return resultado;
+}
+const numeros = [1, 2, 3, 4, 5,];
+const arreglo_Repetido = repetir_Elementos(numeros, 2);
+console.log(arreglo_Repetido);
+
+/** EJERCICIO 4: Repite nombres en una lista
+ * Desarrolla una función que reciba una lista de nombres y los repita un número
+ *  determinado de veces.
+ */
+function repetir_Nombres(orden, situacion) {
+    const producto = [];
+    for (const pieza of orden) {
+        for (let i = 0; i < situacion; i++) {
+            producto.push(pieza);
+        }
+    }
+    return producto;
+}
+const importe = ["Juan", "Carlo", "Diego", "Lucas", "Maria"];
+const orden_Doble = repetir_Nombres(importe, 2);
+console.log(orden_Doble);
+
+/** EJERCICIO 5: Repite una tabla de datos
+ * Modifica una función que reciba un conjunto de datos y lo repita en un formato
+ * estructurado.
+ */
+function repetir_Tabla(tabla, cantidadRepeticiones) {
+    return tabla.flatMap(sujeto => Array(cantidadRepeticiones).fill(sujeto));
+}
+const guarismo = ["lucas", "felipe", "pamela", "juan"];
+const tabla_Repetido = repetir_Tabla(guarismo, 2);
+console.log(tabla_Repetido);
 
 
+
+/** EJERCICIOS DIFICILES */
+/** EJERCICIO 1: Repetición con formato condicional
+ * Escribe una función que repita valores en un objeto con base en una condición
+ * específica.
+ */
+function formato_Condicional (importancia, reproducción, reglon ) {
+    for (let i = 1; i <= lineas; i++) {
+    console.log(caracter.repeat(repeticiones * i));
+  }
+
+}
+
+/** EJERCICIO 2: Generación de patrones con repetición
+ * Diseña una función que genere patrones visuales utilizando .repeat().
+ */
+function generarPatron(caracter, repeticiones, lineas) {
+  for (let i = 1; i <= lineas; i++) {
+    console.log(caracter.repeat(repeticiones * i));
+  }
+}
+generarPatron("<", 2, 5);
