@@ -990,12 +990,7 @@ console.log(tabla_Repetido);
  * Escribe una función que repita valores en un objeto con base en una condición
  * específica.
  */
-function formato_Condicional (importancia, reproducción, reglon ) {
-    for (let i = 1; i <= lineas; i++) {
-    console.log(caracter.repeat(repeticiones * i));
-  }
-
-}
+           // PENDIENTE //
 
 /** EJERCICIO 2: Generación de patrones con repetición
  * Diseña una función que genere patrones visuales utilizando .repeat().
@@ -1006,3 +1001,8 @@ function generarPatron(caracter, repeticiones, lineas) {
   }
 }
 generarPatron("<", 2, 5);
+
+/** EJERCICIO 4: Repetición dinámica de frases
+ * Crea una función que adapte la cantidad de repeticiones según la longitud
+ * de la entrada.
+ */
