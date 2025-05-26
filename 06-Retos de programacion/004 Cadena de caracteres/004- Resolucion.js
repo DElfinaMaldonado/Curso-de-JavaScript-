@@ -1060,29 +1060,25 @@ function transformar_Texto() {
     const arrayone1 = ['Arroz', 'Leguminosa ', 'Frijol'];
     arrayone1.forEach((arrayone1) => {
         const upper = arrayone1.toUpperCase();
-                console.log(upper);
+        console.log(upper);
     });
 }
 transformar_Texto();
 
 
 
+
 /** EJERCICIO INTERMEDIO */
 
 /** EJERCICIO 1: Filtrar elementos dentro de un array
- *  Usando `.forEach()`, recorre un array de números e imprime solo los que sean mayores a 10.
-
+ *  Usando `.forEach()`, recorre un array de números e
+ *  imprime solo los que sean mayores a 10.
  */
-
-
-
-Se continuó avanzando en el curso de Lógica de Programación, enfocándose en ejercicios que involucran el uso de `repeat()`. Se completaron los siguientes desafíos:
-
-- Repetición dinámica de frases  
-- Repetición de un párrafo estructurado  
-- Recorrido de un array de nombres  
-- Modificación de valores dentro de un array  
-- Recorrido de un array de objetos  
-- Suma de los valores en un array  
-- Transformación de texto dentro de un array  
-- Filtrado de elementos dentro de un array  
+function filtrando_Elementos () {
+const nota = [1, 20, 15, 9, 43, 78, 90, 3, 5, 12, 11, 7];
+nota.forEach((nota) => {
+    const valor = nota => 10;
+    console.log(valor);
+});
+}
+filtrando_Elementos ();
