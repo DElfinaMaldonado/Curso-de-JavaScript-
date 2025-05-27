@@ -1007,7 +1007,7 @@ console.log(frase_Duplicada);
  * Crea un array de nombres y usa `.forEach()` para imprimir cada nombre en consola.
  */
 function treyecto_Nombres() {
-    const arrayoneone = ["Pamemla", "Raul", "Sofia", "Victoria", "Cristina"];
+    const arrayoneone = ["Pamela", "Raul", "Sofia", "Victoria", "Cristina"];
     arrayoneone.forEach((elem) => {
         console.log(elem);
     });
@@ -1070,15 +1070,106 @@ transformar_Texto();
 
 /** EJERCICIO INTERMEDIO */
 
+
+// Que tengo mal en mi codigo, no quiro quitar el foreach ya que lo pide el ejercicio
 /** EJERCICIO 1: Filtrar elementos dentro de un array
  *  Usando `.forEach()`, recorre un array de números e
  *  imprime solo los que sean mayores a 10.
  */
-function filtrando_Elementos () {
-const nota = [1, 20, 15, 9, 43, 78, 90, 3, 5, 12, 11, 7];
-nota.forEach((nota) => {
-    const valor = nota => 10;
-    console.log(valor);
+function filtrando_Elementos() {
+    const nota = [1, 20, 15, 9, 43, 78, 90, 3, 5, 12, 11, 7];
+    nota.forEach((valorar) => {
+        if (valorar > 10) {
+            console.log(valorar);
+        }
+    });
+}
+filtrando_Elementos();
+
+/** EJERCICIO 2: Modificar objetos dentro de un array
+ * Toma un array de objetos con una propiedad `edad` y usa `.forEach()`
+ * para aumentar la edad en 1.
+ */
+function transformar_Array() {
+    const individuos = [
+        { nombre: "Juan", edad: 25 },
+        { nombre: "Ana", edad: 45 },
+        { nombre: "Carlos", edad: 28 },
+    ];
+    individuos.forEach((individuo) => {
+        if (individuo.edad < 30) {
+            individuo.edad += 1;
+        }
+        console.log(individuo.edad);
+    });
+}
+transformar_Array();
+
+/** EJERCICIO 3: Formato personalizado de salida
+ * Dado un array de nombres, usa `.forEach()` para imprimirlos con un
+ * prefijo especial, como `"Usuario: Juan"
+*/
+function estructura_Datos () {
+    const registros = [
+    { nombre: "Gerardo", edad: 13},
+    { nombre: "Felipe", edad: 45},
+    { nombre: "Carlos", edad: 3},
+    { nombre: "Vania", edad: 22},
+    { nombre: "Mauricio", edad: 30},
+    ];
+    registros.forEach((registro) => {
+    console.log(`Usuario: ${registro.nombre}`);
 });
 }
-filtrando_Elementos ();
+estructura_Datos();
+
+/** EJERCICIO 4: Simular estructura de datos dinámica
+ * Usa `.forEach()` para recorrer un array y generar un nuevo objeto con datos organizados.
+ */
+function simular_Estructura (){
+    const datos = [
+        { nombre: "Delfin", edad: 8 },
+        { nombre: "Foca", edad: 2 },
+        { nombre: "Tortuga", edad: 11},
+        { nombre: "Ballena", edad: 4},
+        { nombre: "Pez", edad: 3},
+    ];
+    const resultado = {};
+    datos.forEach((dato) => {
+        resultado[dato.edad] = dato.nombre;
+    });
+    console.log(resultado);
+}
+simular_Estructura();
+
+/** EJERCICICO 5:
+ *   Recorre un array y cuenta cuántas veces aparece cada elemento usando un objeto auxiliar.
+*/
+ function recorrer (){
+    const elementos = ["manzana", "banana", "manzana", "naranja", "banana", "manzana"];
+    const contador = {};
+    elementos.forEach((elemento) => {
+        if (contador[elemento]) {
+            contador[elemento]++;
+        } else {
+            contador[elemento] = 1;
+        }
+    });
+    return contador;
+}
+recorrer();
+
+
+
+
+
+
+// function calcular () {
+
+// }
+// function calcular_pieza () {
+//     // const componente_Frutas = ["Uva", "Fresa", "Platano","Toronja", "Melon"];
+//     const com
+
+
+// }
