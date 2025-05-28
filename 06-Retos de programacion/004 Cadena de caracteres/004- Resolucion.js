@@ -1070,8 +1070,6 @@ transformar_Texto();
 
 /** EJERCICIO INTERMEDIO */
 
-
-// Que tengo mal en mi codigo, no quiro quitar el foreach ya que lo pide el ejercicio
 /** EJERCICIO 1: Filtrar elementos dentro de un array
  *  Usando `.forEach()`, recorre un array de números e
  *  imprime solo los que sean mayores a 10.
@@ -1160,16 +1158,7 @@ simular_Estructura();
 recorrer();
 
 
-
-
-
-
-// function calcular () {
-
-// }
-// function calcular_pieza () {
-//     // const componente_Frutas = ["Uva", "Fresa", "Platano","Toronja", "Melon"];
-//     const com
-
-
-// }
+/** EJERCICIO DIFICIL */
+/** EJERCICIO 1: Recorrer un array dentro de un array
+ * 
+ */
