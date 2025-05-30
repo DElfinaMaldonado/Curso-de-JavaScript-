@@ -381,6 +381,10 @@ function intercambiar_Caractereres(serie) {
 console.log(intercambiar_Caractereres("Paleteria"));
 console.log(intercambiar_Caractereres("Montes"));
 
+
+
+
+
 // LONGUITUD → length
 /** Es un objeto string que representa la longuitud de una cadena, en unidades
  */
@@ -1035,7 +1039,6 @@ const personas = [
     { nombre: "Ana", edad: 30 },
     { nombre: "Carlos", edad: 28 },
 ];
-
 personas.forEach((persona) => {
     console.log(persona.nombre);
 });
@@ -1107,30 +1110,31 @@ transformar_Array();
  * Dado un array de nombres, usa `.forEach()` para imprimirlos con un
  * prefijo especial, como `"Usuario: Juan"
 */
-function estructura_Datos () {
+function estructura_Datos() {
     const registros = [
-    { nombre: "Gerardo", edad: 13},
-    { nombre: "Felipe", edad: 45},
-    { nombre: "Carlos", edad: 3},
-    { nombre: "Vania", edad: 22},
-    { nombre: "Mauricio", edad: 30},
+        { nombre: "Gerardo", edad: 13 },
+        { nombre: "Felipe", edad: 45 },
+        { nombre: "Carlos", edad: 3 },
+        { nombre: "Vania", edad: 22 },
+        { nombre: "Mauricio", edad: 30 },
     ];
     registros.forEach((registro) => {
-    console.log(`Usuario: ${registro.nombre}`);
-});
+        console.log(`Usuario: ${registro.nombre}`);
+    });
 }
 estructura_Datos();
 
 /** EJERCICIO 4: Simular estructura de datos dinámica
- * Usa `.forEach()` para recorrer un array y generar un nuevo objeto con datos organizados.
+ * Usa `.forEach()` para recorrer un array y generar un nuevo objeto con datos
+ * organizados.
  */
-function simular_Estructura (){
+function simular_Estructura() {
     const datos = [
         { nombre: "Delfin", edad: 8 },
         { nombre: "Foca", edad: 2 },
-        { nombre: "Tortuga", edad: 11},
-        { nombre: "Ballena", edad: 4},
-        { nombre: "Pez", edad: 3},
+        { nombre: "Tortuga", edad: 11 },
+        { nombre: "Ballena", edad: 4 },
+        { nombre: "Pez", edad: 3 },
     ];
     const resultado = {};
     datos.forEach((dato) => {
@@ -1143,7 +1147,7 @@ simular_Estructura();
 /** EJERCICICO 5:
  *   Recorre un array y cuenta cuántas veces aparece cada elemento usando un objeto auxiliar.
 */
- function recorrer (){
+function recorrer() {
     const elementos = ["manzana", "banana", "manzana", "naranja", "banana", "manzana"];
     const contador = {};
     elementos.forEach((elemento) => {
@@ -1160,5 +1164,255 @@ recorrer();
 
 /** EJERCICIO DIFICIL */
 /** EJERCICIO 1: Recorrer un array dentro de un array
- * 
  */
+function pasar_Elementos() {
+    const matriz = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    matriz.forEach(fila => {
+        fila.forEach(elemento => {
+            console.log(elemento);
+        });
+    });
+}
+pasar_Elementos();
+
+/** EJERCICIO 2: Validar información dentro de un array de objetos
+ * Usa `.forEach()` para verificar que todos los objetos de un array
+ * tengan una propiedad obligatoria.
+ */
+function Verificar() {
+    const pieza = [
+        { color: "azul", transporte: "Carro", valor: 500 },
+        { color: "Amarillo", fruta: "Platano", valor: 45 },
+        { color: "cafe", transporte: "Camioneta", valor: 2400 },
+        { color: "rojo", transporte: " Moto", valor: 30 },
+    ];
+    pieza.forEach((coste) => {
+        if (!coste.hasOwnProperty("transporte")) {
+            console.log(`El conjunto de ${coste.transporte} no lo posee`);
+        } else {
+            console.log(`El conjunto de ${coste.transporte} si lo posee`);
+        }
+    });
+}
+Verificar();
+
+/** EJERCICIO 3: Agrupar elemenetos segun una condicion
+ * Recorrer un array y agrupara sus elemenetos en dos nuevos array segun la condicion
+ */
+const factor_One = ["Perro", "Paloma", "Zorro", "Gallina", "Alacran", "Araña", "Cococdiro", "Canguro", "Caballo"];
+let indicativo = 5;
+let agrupacion = []
+let objeto = {}
+factor_One.forEach(valoracion => {
+    if (objeto[valoracion[0]]) {
+        objeto[valoracion[0]] += (' ; ' + valoracion)
+    } else {
+        objeto[valoracion[0]] = valoracion
+    }
+})
+agrupacion = Object.values(objeto)
+console.log(agrupacion)
+
+
+/** EJERCICIO 4: Simular un sistema de actualización de datos
+ * Dado un array de objetos con `estado`, usa `.forEach()` para marcar
+ * algunos como `"actualizado"` según cierta lógica
+ */
+const nota = {
+    notas: [
+        { id: 0, nombre: "Juana",   apellido: "Gonzalez", edad: 23, estado: "Pausa" },
+        { id: 1, nombre: "Ricardo", apellido: "Perez", edad: 21, estado: "inactivo" },
+        { id: 2, nombre: "Javier",  apellido: "Huerta", edad: 50, estado: "activo" },
+        { id: 3, nombre: "Monica",  apellido: "Montes", edad: 30, estado: "inactivo" },
+    ]
+};
+function sistema_Actualizacion() {
+    nota.notas.forEach((elemento) => {
+        if (elemento.estado === "inactivo") {
+            elemento.estado = "actualizado";
+        }
+    });
+}
+sistema_Actualizacion();
+console.log(nota);
+
+/** EJERCICIO 5: *Generar estructura JSON con `.forEach()
+ *Toma un array y, utilizando `.forEach()`, construye un objeto JSON con claves y valores extraídos de los datos.
+ */
+function generar_JSON() {
+const datos = [
+        { id: 1, nombre: "Juan", edad: 25 },
+        { id: 2, nombre: "Ana", edad: 30 },
+        { id: 3, nombre: "Carlos", edad: 28 },
+    ];
+    const resultado = {};
+    datos.forEach((dato) => {
+        resultado[dato.id] = { nombre: dato.nombre, edad: dato.edad };
+    });
+    return JSON.stringify(resultado, 2);
+}
+console.log(generar_JSON());
+
+
+
+
+// Reemplazo
+
+// replace () → Devuelve una nueva cadena con una, varias o todas las coincidencias de un patron reemplazadas por un replace()
+// Reemplaza solo la primera aparaicion de un texto
+
+
+
+/**EJERCICIOS FACILES */
+
+/** EJERICIO 1: Reemplazo de palabras en una cadena
+ *  Dada una cadena de texto, usa `.replace()` para cambiar una palabra
+ *  específica por otra
+ */
+function reemplazar_Palabras () {
+    const  cambio_Oracion = "Hoy es Miercoles y esta siendo un dia muy nublado";
+    console.log(cambio_Oracion.replace("nublado", "lluvioso"));
+}
+reemplazar_Palabras();
+
+/** EJERCICIO 2: Reemplazo de múltiples palabras con `.replaceAll()
+ *  Usa `.replaceAll()` para cambiar todas las ocurrencias de una palabra en una cadena por otra.
+ */
+// replaceAll() → DEvuelve una cadena con todas las coincidencias reemplazadas por replacement
+// Reemplaza todas las pariciones de un texto
+function reemplazo_All(){
+    const oracion_Orignal = "Hoy es Miercoles y el clima esta lluvioso, mañana tambien estara lluvioso";
+    let Original = "lluvioso";
+    let reemplazo_Nuevo = "Caluroso";
+    let nueva_Oracion = oracion_Orignal.replaceAll(Original, reemplazo_Nuevo);
+    console.log(nueva_Oracion);
+}
+reemplazo_All();
+
+/** EJERCICI0 3:
+ *  Dado un array de números, usa `.map()` para reemplazar los valores `null` por `0`
+ */
+const cantidades = [1, 2, 3, 4, 5];
+const numerosReemplazados = numeros.map(numero => {
+  if (numero === 3) {
+    return 10;
+  } else if (numero === 5) {
+        return 20;
+  }
+  return numero;
+});
+console.log(numerosReemplazados);
+
+/** EJERCICIO 4: Reemplazo de caracteres especiales en un string
+ * Toma una cadena que contenga caracteres especiales (`#`, `$`, `%`) y usa `.replace()` para eliminarlos.
+ */
+function reemplazar_Caracateres () {
+    const cadenas_Texto = 'Hoy es Jueves y es un d&a muy nub/@do';
+    const reemplazo_Caracteres = cadenas_Texto.replace(/[&/@]/g, '');
+    console.log(reemplazo_Caracteres);
+}
+reemplazar_Caracateres();
+
+/** EJERCICIO 5: Reemplazo de espacios por guiones bajos
+ *  Dada una cadena con varias palabras separadas por espacios,
+ *  reemplázalos con `_` usando `.replace()
+ */
+function reemplazo_Espacios () {
+    const cadena_Nueva = `Hoy es jueves y es un dia muy caluroso`;
+    const cadena_Convertida = cadena_Nueva.replace(/ /g, "_");
+    console.log(cadena_Convertida);
+}
+reemplazo_Espacios();
+
+
+/** EJERCICIOS INTERMEDIOS */
+
+/** EJERCICIO 1: Reemplazo dinámico en un objeto
+ * Crea un objeto con datos de usuario y usa una función para cambiar
+ * dinámicamente ciertos valores, como `"estado": "pendiente"` a `"estado": "aprobado"`
+ */
+    const datos_Usuario = {
+        datos_Usuarios: [
+        { nombre: "Juan", edad: 24, estado: "pendiente" },
+        { nombre: "Luciana", edad: 30, estado: "aprobado" },
+        { nombre: "Monica", edad: 20, estado: "pendiente" },
+        { nombre: "Lorenzo", edad: 15, estado: "pendiente" },
+    ]
+};
+function reeemplazo_Datos() {
+   datos_Usuario.datos_Usuarios.map ((cambio) => {
+        if (cambio.estado === "pendiente") {
+            cambio.estado = "aprobado";
+        }
+    });
+}
+reeemplazo_Datos();
+console.log(datos_Usuario);
+
+/** EJERCICIO 2: Reemplazo de fechas en un array de strings
+ * Dado un array de fechas con formato `DD-MM-YYYY`, usa `.map()` y
+ * `.replace()` para convertirlas a `YYYY/MM/DD
+ */
+function reemplazar_fechas () {
+    const fechas = ["25-12-2023", "01-01-2024", "14-02-2024"];
+    const fechasConvertidas = fechas.map(fecha => {
+        return fecha.replace(/(\d{2})-(\d{2})-(\d{4})/, "$3/$2/$1");
+    });
+    console.log(fechasConvertidas);
+}
+reemplazar_fechas ();
+
+/** EJERCICIO: 3
+ *  Usa `.replace()` con una **expresión regular** para cambiar palabras clave
+ * en un párrafo (`JavaScript` por `JS`)
+*/
+// function expresion_Regular () {
+const parrafo = "Hoy es Jueves y el dia esta algo loco, primero lluvieso, despues nublado y nuevamente con lluvia";
+function reemplazar_PalabrasClave() {
+    const nuevoParrafo = parrafo.replace(/Jueves/g, "JS");
+    console.log(nuevoParrafo);
+}
+reemplazar_PalabrasClave ();
+
+/** EJERCICIO 4: Reemplazo condicional en un array de objetos
+ * Toma un array de productos y cambia la propiedad `"disponible": false` a `"disponible": true` si el stock es mayor a `10`
+ */
+function reemplazar_Objetos() {
+    const productos = [
+        { nombre: "Galleta", precio: 1.5, disponible: false, stock: 5 },
+        { nombre: "Refresco", precio: 2.0, disponible: true, stock: 15 },
+        { nombre: "Papas", precio: 1.0, disponible: false, stock: 20 },
+        { nombre: "Ruffles", precio: 1.8, disponible: true, stock: 8 },
+    ];
+    productos.forEach(producto => {
+        if (producto.stock > 10) {
+            producto.disponible = true;
+        }
+    });
+    console.log(productos);
+}
+reemplazar_Objetos();
+
+
+
+//    const datos_Usuario = {
+//         datos_Usuarios: [
+//         { nombre: "Juan", edad: 24, estado: "pendiente" },
+//         { nombre: "Luciana", edad: 30, estado: "aprobado" },
+//         { nombre: "Monica", edad: 20, estado: "pendiente" },
+//         { nombre: "Lorenzo", edad: 15, estado: "pendiente" },
+//     ]
+// };
+// function reeemplazo_Datos() {
+//    datos_Usuario.datos_Usuarios.map ((cambio) => {
+//         if (cambio.estado === "pendiente") {
+//             cambio.estado = "aprobado";
+//         }
+//     });
+// }
+// reeemplazo_Datos();
+// console.log(datos_Usuario);
