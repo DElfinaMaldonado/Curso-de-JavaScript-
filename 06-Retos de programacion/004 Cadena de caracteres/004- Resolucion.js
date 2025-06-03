@@ -1001,6 +1001,11 @@ console.log(frase_Duplicada);
 //   return result;
 // }
 
+
+
+
+
+
 // Recorrido → forEach()
 /* Es un metodo que se utiliza para iterar sobre los elementos de un array
  * Es un metodo disponible en ararys que ofrece un recorrido sin necesidad de
@@ -1445,10 +1450,86 @@ const modificacion_JSON = JSON.stringify(objeto_Modificado);
 console.log(modificacion_JSON);
 
 
+/** EjERCICIO 3: Reemplazo de múltiples valores en una cadena con un diccionario
+ * Usa un objeto que actúe como diccionario y reemplaza múltiples palabras en una cadena con sus equivalentes (ejemplo: `"JS"` por `"JavaScript"`).
+ */
+/**
+ * RegExp:
+ * Es un objeto que se utiliza para buscas y reemplazar carcteres en cadena
+ * El objeto RegExp es una expresion
+ * /g: Rendimiento global de los partidos (encontrar todos)*/
 
-const escrito_Diccionario = "Hoy es un dia muy soleado en la ciudad";
-const alfabet = "Hdscdmy";
-const valoracion_Diccionario = "aeiou";
-for (len(valoracion_Diccionario) => i = 0; i < alfabet.length; i++) {
-escrito_Diccionario = escrito_Diccionario.replace(alfabet[i], valoracion_Diccionario[i]);
+function reemplazar_Multiples() {
+    const diccionario = {
+        "Martes": "Jueves",
+        "nublado": "soleado",
+        "JS": "HTML",
+    };
+    let cadena = "Hoy es Martes y el clima esta nublado, se esta programando en JS";
+    for (let key in diccionario) {
+        cadena = cadena.replace(new RegExp(key, 'g'), diccionario[key]);
+    }
+    console.log(cadena);
 }
+reemplazar_Multiples();
+
+// function reemplazo_Diccionario (palabra_original, palabra_reemplazada) {
+//     const frase_Original = 'Hoy es martes, el clima esta nublado y se esta programando en Javascript';
+//     const diccionario = {
+//         "martes": "jueves",
+//         "nublado": "soleado",
+//         "Javascript": "JS",
+//         }
+//          for (palabra_original = palabra_reemplazada in diccionario.items()) {
+//             frase_Original = frase_Original.replace(frase_Original,palabra_reemplazada);
+//     }
+// }
+// console.log(frase_Original);
+
+/** EJERCICIO 5: Reemplazo en estructuras de datos complejas
+ *  Toma una estructura de datos anidada y usa un método para recorrerla y reemplazar todos los valores `"null"` por `undefined`
+ */
+function simular_Estructura() {
+    const informacion = {
+        consumidor: {
+            nombre: "Pamela", edad: 25,
+            direccion: { ciudad: "Ciudad de Mexico", codigopostal: 54789 }
+        }
+    };
+    function reemplazar_Datos(obj) {
+        for (let key in obj) {
+            if (obj[key] === null) {
+                obj[key] = undefined;
+            } else if (typeof obj[key] === 'object') {
+                reemplazar_Estructura(obj[key]);
+            }
+        }
+    }
+    reemplazar_Datos(informacion);
+    console.log(informacion);
+}
+
+
+
+
+// Division →  (/)
+/* Produce el cociente de sus operndos donde el operando izquierdo es el dividiendo y operando derecho es el divisor
+*/
+
+
+//     const asociación = [9,8,7,6,5,4,3,2,1];
+//     const respuesta_Division = [];
+//     const divisor = 2;
+//    asociación.forEach(function(elemento, indice) {
+//    respuesta_Division[indice] = elemento / divisor;
+//     //    asociación /=2;
+//         });
+//          console.log(asociación);
+
+         const Numeros = [6,5,4,3,2,1];
+         Numeros.forEach(function(numero) {
+             const resultado = numero / 2;
+             console.log(resultado);
+         });
+        //  console.log(numero / 2);
+        //  )};

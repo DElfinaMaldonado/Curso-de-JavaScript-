@@ -1,47 +1,77 @@
-// Longitud de la cadena
-console.log(cadena.length); // 17
+function simular_Estructura() {
+    const informacion = { consumidor: { nombre: "Pamela", edad: 25,
+        direccion: { ciudad: "Ciudad de Mexico", codigopostal : 54789}}};
+        // { nombre: "Foca", edad: 2 },
+        // { nombre: "Tortuga", edad: 11 },
+        // { nombre: "Ballena", edad: 4 },
+        // { nombre: "Pez", edad: 3 },
 
-// Subcadenas
-console.log(cadena.substring(6, 16)); // 'JavaScript'
-console.log(cadena.slice(-10)); // 'JavaScript!'
-
-// Concatenación
-const nuevaCadena = cadena + " ¡Es genial!";
-console.log(nuevaCadena);
-
-// Repetición
-console.log("Hola ".repeat(3)); // 'Hola Hola Hola '
-
-// Recorrido
-for (let char of cadena) {
-    console.log(char);
+function reemplazar_Estructura(obj) {
+    for( let key in obj) {
+        if(obj[ key] === null) {
+        } else if (typeof obj[key] === ' object') {
+            reemplazar_Estructura(obj[key]);
+        }
+    }
+    }
+    console.log(informacion);
 }
 
-// Conversión a mayúsculas y minúsculas
-console.log(cadena.toUpperCase()); // 'HOLA, JAVASCRIPT!'
-console.log(cadena.toLowerCase()); // 'hola, javascript!'
 
-// Reemplazo
-console.log(cadena.replace("JavaScript", "el mundo")); // 'Hola, el mundo!'
 
-// División
-const palabras = cadena.split(" ");
-console.log(palabras); // ['Hola,', 'JavaScript!']
 
-// Unión
-console.log(palabras.join(" - ")); // 'Hola, - JavaScript!'
 
-// Interpolación
-const lenguaje = "JavaScript";
-console.log(`Me encanta ${lenguaje}`); // 'Me encanta JavaScript'
 
-// Verificación
-console.log(cadena.includes("JavaScript")); // true
-console.log(cadena.startsWith("Hola")); // true
-console.log(cadena.endsWith("!")); // true
-console.log(cadena.indexOf("JavaScript")); // 6
-console.log(cadena.lastIndexOf("a")); // 13
 
-// Eliminación de espacios en blanco
-const cadenaEspacios = "  Hola, mundo!  ";
-console.log(cadenaEspacios.trim()); // 'Hola, mundo!'
+
+//         function reemplazar_Datos_Complejos () {
+//     const datos = {
+//         usuario: {
+//             nombre: "Juan",
+//             edad: null,
+//             direccion: {
+//                 ciudad: "Madrid",
+//                 codigoPostal: null
+//             }
+//         }
+//     };
+// function reemplazar_Estructura(obj) {
+//     for( let key in obj) {
+//         if(obj[ key] === null) {
+//         } else if (typeof obj[key] === ' object') {
+//             reemplazar_Estructura(obj[key]);
+//         }
+//     }
+//     }
+//     console.log(informacion);
+// }
+
+
+
+
+
+//     function reemplazar_Null(obj) {
+//         for (let key in obj) {
+//             if (obj[key] === null) {
+//                 obj[key] = undefined;
+//             } else if (typeof obj[key] === 'object') {
+//                 reemplazar_Null(obj[key]);
+//             }
+//         }
+//     }
+//     reemplazar_Null(datos);
+//     console.log(datos);
+// }
+
+
+
+function dividir_numeros() {
+    const asociación = [9,8,7,6,5,4,3,2,1];
+    const respuesta_Divison = [];
+    const divisor = 2;
+    asociación.forEach((asociación) => {
+       asociación /=2;
+         console.log(asociación);
+    });
+}
+dividir_numeros();
