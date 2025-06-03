@@ -1224,10 +1224,10 @@ console.log(agrupacion)
  */
 const nota = {
     notas: [
-        { id: 0, nombre: "Juana",   apellido: "Gonzalez", edad: 23, estado: "Pausa" },
+        { id: 0, nombre: "Juana", apellido: "Gonzalez", edad: 23, estado: "Pausa" },
         { id: 1, nombre: "Ricardo", apellido: "Perez", edad: 21, estado: "inactivo" },
-        { id: 2, nombre: "Javier",  apellido: "Huerta", edad: 50, estado: "activo" },
-        { id: 3, nombre: "Monica",  apellido: "Montes", edad: 30, estado: "inactivo" },
+        { id: 2, nombre: "Javier", apellido: "Huerta", edad: 50, estado: "activo" },
+        { id: 3, nombre: "Monica", apellido: "Montes", edad: 30, estado: "inactivo" },
     ]
 };
 function sistema_Actualizacion() {
@@ -1244,7 +1244,7 @@ console.log(nota);
  *Toma un array y, utilizando `.forEach()`, construye un objeto JSON con claves y valores extraídos de los datos.
  */
 function generar_JSON() {
-const datos = [
+    const datos = [
         { id: 1, nombre: "Juan", edad: 25 },
         { id: 2, nombre: "Ana", edad: 30 },
         { id: 3, nombre: "Carlos", edad: 28 },
@@ -1273,8 +1273,8 @@ console.log(generar_JSON());
  *  Dada una cadena de texto, usa `.replace()` para cambiar una palabra
  *  específica por otra
  */
-function reemplazar_Palabras () {
-    const  cambio_Oracion = "Hoy es Miercoles y esta siendo un dia muy nublado";
+function reemplazar_Palabras() {
+    const cambio_Oracion = "Hoy es Miercoles y esta siendo un dia muy nublado";
     console.log(cambio_Oracion.replace("nublado", "lluvioso"));
 }
 reemplazar_Palabras();
@@ -1284,7 +1284,7 @@ reemplazar_Palabras();
  */
 // replaceAll() → DEvuelve una cadena con todas las coincidencias reemplazadas por replacement
 // Reemplaza todas las pariciones de un texto
-function reemplazo_All(){
+function reemplazo_All() {
     const oracion_Orignal = "Hoy es Miercoles y el clima esta lluvioso, mañana tambien estara lluvioso";
     let Original = "lluvioso";
     let reemplazo_Nuevo = "Caluroso";
@@ -1298,19 +1298,19 @@ reemplazo_All();
  */
 const cantidades = [1, 2, 3, 4, 5];
 const numerosReemplazados = numeros.map(numero => {
-  if (numero === 3) {
-    return 10;
-  } else if (numero === 5) {
+    if (numero === 3) {
+        return 10;
+    } else if (numero === 5) {
         return 20;
-  }
-  return numero;
+    }
+    return numero;
 });
 console.log(numerosReemplazados);
 
 /** EJERCICIO 4: Reemplazo de caracteres especiales en un string
  * Toma una cadena que contenga caracteres especiales (`#`, `$`, `%`) y usa `.replace()` para eliminarlos.
  */
-function reemplazar_Caracateres () {
+function reemplazar_Caracateres() {
     const cadenas_Texto = 'Hoy es Jueves y es un d&a muy nub/@do';
     const reemplazo_Caracteres = cadenas_Texto.replace(/[&/@]/g, '');
     console.log(reemplazo_Caracteres);
@@ -1321,7 +1321,7 @@ reemplazar_Caracateres();
  *  Dada una cadena con varias palabras separadas por espacios,
  *  reemplázalos con `_` usando `.replace()
  */
-function reemplazo_Espacios () {
+function reemplazo_Espacios() {
     const cadena_Nueva = `Hoy es jueves y es un dia muy caluroso`;
     const cadena_Convertida = cadena_Nueva.replace(/ /g, "_");
     console.log(cadena_Convertida);
@@ -1335,8 +1335,8 @@ reemplazo_Espacios();
  * Crea un objeto con datos de usuario y usa una función para cambiar
  * dinámicamente ciertos valores, como `"estado": "pendiente"` a `"estado": "aprobado"`
  */
-    const datos_Usuario = {
-        datos_Usuarios: [
+const datos_Usuario = {
+    datos_Usuarios: [
         { nombre: "Juan", edad: 24, estado: "pendiente" },
         { nombre: "Luciana", edad: 30, estado: "aprobado" },
         { nombre: "Monica", edad: 20, estado: "pendiente" },
@@ -1344,7 +1344,7 @@ reemplazo_Espacios();
     ]
 };
 function reeemplazo_Datos() {
-   datos_Usuario.datos_Usuarios.map ((cambio) => {
+    datos_Usuario.datos_Usuarios.map((cambio) => {
         if (cambio.estado === "pendiente") {
             cambio.estado = "aprobado";
         }
@@ -1357,14 +1357,14 @@ console.log(datos_Usuario);
  * Dado un array de fechas con formato `DD-MM-YYYY`, usa `.map()` y
  * `.replace()` para convertirlas a `YYYY/MM/DD
  */
-function reemplazar_fechas () {
+function reemplazar_fechas() {
     const fechas = ["25-12-2023", "01-01-2024", "14-02-2024"];
     const fechasConvertidas = fechas.map(fecha => {
         return fecha.replace(/(\d{2})-(\d{2})-(\d{4})/, "$3/$2/$1");
     });
     console.log(fechasConvertidas);
 }
-reemplazar_fechas ();
+reemplazar_fechas();
 
 /** EJERCICIO: 3
  *  Usa `.replace()` con una **expresión regular** para cambiar palabras clave
@@ -1376,7 +1376,7 @@ function reemplazar_PalabrasClave() {
     const nuevoParrafo = parrafo.replace(/Jueves/g, "JS");
     console.log(nuevoParrafo);
 }
-reemplazar_PalabrasClave ();
+reemplazar_PalabrasClave();
 
 /** EJERCICIO 4: Reemplazo condicional en un array de objetos
  * Toma un array de productos y cambia la propiedad `"disponible": false` a `"disponible": true` si el stock es mayor a `10`
@@ -1397,22 +1397,58 @@ function reemplazar_Objetos() {
 }
 reemplazar_Objetos();
 
+/** EJERCICIO 5: Reemplazo de etiquetas HTML en una cadena
+ *  Dada una cadena con contenido HTML (`<b>Hola</b>`), usa `.replace()` para eliminar las etiquetas y conservar solo el texto. 
+ */
+function reemplazo_html() {
+    const htmlString = "<b>Hola</b>, <i>mundo</i>!";
+    const newString = htmlString.replace(/<\/?[^>]+(>|$)/g, "");
+    console.log(newString);
+}
+reemplazo_html();
 
 
-//    const datos_Usuario = {
-//         datos_Usuarios: [
-//         { nombre: "Juan", edad: 24, estado: "pendiente" },
-//         { nombre: "Luciana", edad: 30, estado: "aprobado" },
-//         { nombre: "Monica", edad: 20, estado: "pendiente" },
-//         { nombre: "Lorenzo", edad: 15, estado: "pendiente" },
-//     ]
-// };
-// function reeemplazo_Datos() {
-//    datos_Usuario.datos_Usuarios.map ((cambio) => {
-//         if (cambio.estado === "pendiente") {
-//             cambio.estado = "aprobado";
-//         }
-//     });
-// }
-// reeemplazo_Datos();
-// console.log(datos_Usuario);
+
+
+/** EJERCICIOS DIFCILES */
+
+/** EJERCICIO 1: Normalizar datos en un array de objetos
+ * Toma un array de objetos con nombres (`"Carlos"`, `"carlos"`, `"CARLOS"`) y usa `.map()` para asegurarte de que estén en formato uniforme (todos en minúscula)
+ */
+function normalizar_Datos() {
+    const conjunto_Palabras = ["Hola", "MUNDO", "JavaScript"];
+    const normalizacion_Mayusculas = conjunto_Palabras.map(texto => texto.toLowerCase());
+    console.log(normalizacion_Mayusculas);
+}
+normalizar_Datos();
+
+/** EJERCICIO 2: Reemplazo de valores en un JSON anidado
+ * Dado un JSON con estructura anidada, usa recursión para reemplazar todas las ocurrencias de `"activo": false` por `"activo": true`
+ */
+
+const datos_JSON = '{"a": 1, "b": {"c": 2, "d": 3}}';
+const objecto_JSON = JSON.parse(datos_JSON);
+function relevo_Valores(proposito, validez, nueva_Validacion) {
+    for (let key in proposito) {
+        if (proposito.hasOwnProperty(key)) {
+            if (proposito[key] === validez) {
+                proposito[key] = nueva_Validacion;
+            } else if (typeof proposito[key] === 'object') {
+                relevo_Valores(proposito[key], validez, nueva_Validacion);
+            }
+        }
+    }
+    return proposito;
+}
+const objeto_Modificado = relevo_Valores(objecto_JSON, 2, 5);
+const modificacion_JSON = JSON.stringify(objeto_Modificado);
+console.log(modificacion_JSON);
+
+
+
+const escrito_Diccionario = "Hoy es un dia muy soleado en la ciudad";
+const alfabet = "Hdscdmy";
+const valoracion_Diccionario = "aeiou";
+for (len(valoracion_Diccionario) => i = 0; i < alfabet.length; i++) {
+escrito_Diccionario = escrito_Diccionario.replace(alfabet[i], valoracion_Diccionario[i]);
+}
