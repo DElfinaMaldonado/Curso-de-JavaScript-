@@ -1265,12 +1265,11 @@ console.log(generar_JSON());
 
 
 
+
 // Reemplazo
 
 // replace () → Devuelve una nueva cadena con una, varias o todas las coincidencias de un patron reemplazadas por un replace()
 // Reemplaza solo la primera aparaicion de un texto
-
-
 
 /**EJERCICIOS FACILES */
 
@@ -1486,28 +1485,40 @@ reemplazar_Multiples();
 // }
 // console.log(frase_Original);
 
+
 /** EJERCICIO 5: Reemplazo en estructuras de datos complejas
  *  Toma una estructura de datos anidada y usa un método para recorrerla y reemplazar todos los valores `"null"` por `undefined`
  */
-function simular_Estructura() {
-    const informacion = {
-        consumidor: {
-            nombre: "Pamela", edad: 25,
-            direccion: { ciudad: "Ciudad de Mexico", codigopostal: 54789 }
-        }
-    };
-    function reemplazar_Datos(obj) {
-        for (let key in obj) {
-            if (obj[key] === null) {
-                obj[key] = undefined;
-            } else if (typeof obj[key] === 'object') {
-                reemplazar_Estructura(obj[key]);
-            }
-        }
-    }
-    reemplazar_Datos(informacion);
-    console.log(informacion);
-}
+// function reemplazar_Estructura(obj) {
+//     for (let key in obj) {
+//         if (obj[key] === null) {
+//             obj[key] = undefined;
+//         } else if (typeof obj[key] === 'object') {
+//             reemplazar_Estructura(obj[key]);
+//         }
+//     }
+// }
+// function simular_Estructura() {
+//     const informacion = {
+//         consumidor: {
+//             nombre: "Pamela", edad: 25,
+//             direccion: { ciudad: "Ciudad de Mexico", codigopostal: 54789 }
+//         }
+//     };
+//     function reemplazar_Datos(obj) {
+//         for (let key in obj) {
+//             if (obj[key] === null) {
+//                 obj[key] = undefined;
+//             } else if (typeof obj[key] === 'object') {
+//                 reemplazar_Estructura(obj[key]);
+//             }
+//         }
+//     }
+//     reemplazar_Datos(informacion);
+//     console.log(informacion);
+// }
+// simular_Estructura()
+
 
 
 
@@ -1516,20 +1527,112 @@ function simular_Estructura() {
 /* Produce el cociente de sus operndos donde el operando izquierdo es el dividiendo y operando derecho es el divisor
 */
 
+/** EJERCICIOS FACILES*/
 
-//     const asociación = [9,8,7,6,5,4,3,2,1];
-//     const respuesta_Division = [];
-//     const divisor = 2;
-//    asociación.forEach(function(elemento, indice) {
-//    respuesta_Division[indice] = elemento / divisor;
-//     //    asociación /=2;
-//         });
-//          console.log(asociación);
+/** EJERCICIO 1: Dividir elementos de un array por 2
+ * Toma un array de números y usa .forEach() para dividir cada número por 2.
+ */
+// function dividr_Numeros() {
+//     const Numeros = [6, 5, 4, 3, 2, 1];
+//     Numeros.forEach(function (numero) {
+//         const resultado = numero / 2;
+//         console.log(resultado);
+//     });
+//     console.log(numero / 2);
+// }
+// dividr_Numeros();
 
-         const Numeros = [6,5,4,3,2,1];
-         Numeros.forEach(function(numero) {
-             const resultado = numero / 2;
-             console.log(resultado);
-         });
-        //  console.log(numero / 2);
-        //  )};
+/** EJERCICICIO 2: Obtener la mitad de un número
+ *  Crea una función mitad(numero) que reciba un número y devuelva su mitad
+ */
+// function mitad_Numeros(cifra) {
+//     return cifra / 2;
+// }
+// const secuela = mitad_Numeros(8);
+// console.log(secuela);
+
+/** EJERCICIO 3: División con valores predeterminados
+ * Define una función dividir(a, b = 2) que divida a por b, usando 2 como valor por defecto si b no se proporciona.
+ */
+function valores_Predeterminado() {
+    const a = 20;
+    const b = 2;
+    const resultado = a / b;
+    console.log(resultado);
+    return resultado;
+}
+valores_Predeterminado();
+
+
+/** EJERCICIO 4: División con map
+ * Toma un array de números y usa .map() para generar un nuevo array con cada número dividido entre 3.
+ */
+function arry_Dividido() {
+    const array_Numeros = [3, 6, 9, 12, 15, 18];
+    const nuevo_array = array_Numeros.map((cifra) => cifra / 3);
+    console.log(nuevo_array);
+    return nuevo_array;
+}
+arry_Dividido();
+
+/** EJERCICIO 5: Dividir número ingresado por usuario
+ *  Pide al usuario un número con prompt() y muestra su tercera parte en la consola.
+ */
+// function dividir_Numero_USusario() {
+//     const numero = parseFloat(prompt("Ingrese un número:"));
+//     const divisor = parseFloat(prompt("Ingrese el divisor:"));
+//     if (divisor === 0) {
+//         console.log("No se puede dividir por cero.");
+//         return;
+//     }
+//     const resultado = numero / divisor;
+//     console.log(`El resultado de la división es: ${resultado}`);
+// }
+// dividir_Numero_USusario();
+
+
+
+/** EJERCICIOS INTERMEDIOS  */
+/** EJERCICIO 1: División segura
+ * Crea una función que valide si el divisor es diferente de cero antes de realizar la operación y devuelva un mensaje en caso de error.
+ */
+function division_Segura(dividiendo, divisor) {
+    if (divisor === 0) {
+        return "Error: No se puede dividir por cero.";
+    }
+    return `El resultado de la división es: ${dividiendo / divisor}`;
+}
+console.log(division_Segura(12, 3));
+// function validar_Divisor() {
+// const numero = 10;
+// const divisor = 2;
+// if (isNaN(numero) || isNaN(divisor)) {
+//     console.log("Por favor, ingrese números válidos.");
+//     return;
+// } if (divisor === 0) {
+//     console.log("No se puede dividir por cero.");
+//     return;
+// }   }
+// validar_Divisor();
+
+/** EJERCICIO 2: Promedio de divisiones
+ * Dado un array de números, usa .reduce() para calcular el promedio de la mitad de todos los elementos.
+ */
+function promedio_Divisiones (){
+const cuantía = [1,2,3,4,5,6,7,8,9,10];
+const mont =  cuantía.reduce((acumulador, cuantía) => acumulador + (cuantía/ 2), 0);
+const nivelar = mont / cuantía.length;
+console.log(`El resultado de la división es: ${nivelar}`);
+}
+promedio_Divisiones();
+
+/** EJERCICIO 3: Division modular
+ * Implementar una funcion que divida dos numeros y devuelva el residuo usando el operado %
+ */
+
+
+
+
+
+
+testing-0506
