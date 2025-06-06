@@ -1618,21 +1618,97 @@ console.log(division_Segura(12, 3));
 /** EJERCICIO 2: Promedio de divisiones
  * Dado un array de números, usa .reduce() para calcular el promedio de la mitad de todos los elementos.
  */
-function promedio_Divisiones (){
-const cuantía = [1,2,3,4,5,6,7,8,9,10];
-const mont =  cuantía.reduce((acumulador, cuantía) => acumulador + (cuantía/ 2), 0);
-const nivelar = mont / cuantía.length;
-console.log(`El resultado de la división es: ${nivelar}`);
+function promedio_Divisiones() {
+    const cuantía = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const mont = cuantía.reduce((secuela, cuantía) => secuela + (cuantía / 2), 0);
+    const nivelar = mont / cuantía.length;
+    console.log(`El resultado de la división es: ${nivelar}`);
 }
 promedio_Divisiones();
 
 /** EJERCICIO 3: Division modular
  * Implementar una funcion que divida dos numeros y devuelva el residuo usando el operado %
  */
+function Division_Modular() {
+    const numero_One = 5;
+    const numero_Two = 2;
+    const resultado = (numero_One % numero_Two);
+    console.log(resultado);
+}
+Division_Modular();
+
+/** Division 4: División acumulada
+ * Dado un array, usa .reduce() para dividir todos los números progresivamente, de izquierda a derecha.
+ */
+// function array_Acumulada() {
+//     const cantidad = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//     const total = cantidad.reduce((secuela, cantidad) => secuela + (cantidad / 2));
+//     const operacion = total / cantidad;
+//     console.log(`El resultado de la división es: ${operacion}`);
+// }
+// promedio_Divisiones();
+
+/** EJERCICIO 5: División en objetos
+ *  Crea un array de objetos con valores numéricos y usa .forEach() para dividirlos por un factor definido en una variable global.
+ */
+function division_Numeros() {
+    const finalidades = [
+        { edad: 25 },
+        { edad: 30 },
+        { edad: 28 },
+        { edad: 35 },
+    ];
+    const divisor = 4;
+    const resultado = divisor / finalidades;
+    console.log(`El resultado de la división es: ${resultado}`);
+    console.log(finalidades.map((fibalidades) =>{
+
+    }))
+}
+division_Numeros();
+
+function division_Objetos() {
+    const finalidades = [
+        { edad: 25 },
+        { edad: 30 },
+        { edad: 28 },
+        { edad: 35 },
+    ];
+    const finalidad = finalidades.forEach((finalidades) => {
+        const divisor = 4;
+        const resultado = divisor / finalidades;
+        console.log(`El resultado de la división es: ${resultado}`);
+    });
+}
+division_Objetos();
+
+
+// function promedio_Divisiones() {
+//     const cuantía = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//     const mont = cuantía.reduce((secuela, cuantía) => secuela + (cuantía / 2), 0);
+//     const nivelar = mont / cuantía.length;
+//     console.log(`El resultado de la división es: ${nivelar}`);
+// }
+// promedio_Divisiones();
+
+
+// function multiplicar_Numeros() {
+//     const componentes = [1, 2, 3, 4, 5];
+//     componentes.forEach((componentes) => {
+//         componentes *= 2;
+//         console.log(componentes);
+//     });
+// }
+// multiplicar_Numeros();
 
 
 
+/** EJERCICIOS DIFICILES */
+/** Ejercicio 1: Division en matrices
+ * Divide todos los elementos de una matriz bidimensional por un numero dado y devuelve una nueva matriz con los resultados
+ */
+function division_Matrices() {
 
+}
 
-
-testing-0506
+01-Prueba-060625
