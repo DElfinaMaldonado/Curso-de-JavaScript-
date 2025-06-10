@@ -1661,7 +1661,7 @@ function division_Numeros() {
     const divisor = 4;
     const resultado = divisor / finalidades;
     console.log(`El resultado de la división es: ${resultado}`);
-    console.log(finalidades.map((fibalidades) =>{
+    console.log(finalidades.map((finalidades) =>{
 
     }))
 }
@@ -1708,7 +1708,79 @@ division_Objetos();
  * Divide todos los elementos de una matriz bidimensional por un numero dado y devuelve una nueva matriz con los resultados
  */
 function division_Matrices() {
+        const matrices = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    // const divisor_Matriz = 3;
+    // const matriz = matrices.map((cantidad) =>  cantidad / 3); {
+    //     console.log(`El resultado de la división es: ${matriz [2][1]} `);
+    //     return matriz;
+    const divisor_Matrices = 3;
+    console.log(matrices[2][2] / divisor_Matrices);
+    }
+division_Matrices();
+
+/** EJERCICIO 2: División en un rango dinámico
+ * Crea una función que divida números en un rango dinámico generado por el usuario.
+ */
+// function division_Rango () {
+// const numeros_Rango = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// }
+// division_Rango();
+
+/** EJERCICICO 3: División en estructuras anidadas
+ * Manipula un array de objetos anidados y divide ciertos valores internos por un factor específico.
+ */
+function divisionEstructurasAnidadas(arr, factor) {
+    return arr.map(obj => {
+        let nuevo = { ...obj };
+        for (let key in nuevo) {
+            if (typeof nuevo[key] === "number") {
+                nuevo[key] = nuevo[key] / factor;
+            } else if (typeof nuevo[key] === "object" && nuevo[key] !== null) {
+                nuevo[key] = divisionEstructurasAnidadas([nuevo[key]], factor)[0];
+            }
+        }
+        return nuevo;
+    });
+}
+const arr = [1,2,3,4,5,6,7,8,9];
+const factor = 2;
+const reajuste = arr / factor;
+console.log(reajuste);
+
+/** EJERCICIO 4: reajuste
+ * Implementa una función que maneje grandes números y optimice las divisiones con BigInt.
+ */
+// BigInt → Los valores representan valores enteros que son demasiados altos o demasiados bajos para ser representados por el number primitivo
+// A UN BigInt se le agrega n al final del literal entero o llamado de la funcion que crea bigints desde cadenas
+// function reajuste_BigInt () {
+let numeros_Bing_Uno = 4n;
+let numeros_Bing_Dos = 2;
+// let numeros_Resultado = numeros_Bing_Uno / numeros_Bing_Dos;
+console.log(numeros_Bing_Uno / BigInt(numeros_Bing_Dos));
+// }
+// reajuste_BigInt();
+
+/** EJERCICIO 5: División en múltiples pasos
+ * Simula un sistema de cálculo financiero donde los valores pasan por varias divisiones secuenciales y afectan otros datos.
+ */
+function division_multiples () {
 
 }
+division_multiples();
+
+
+
+
+
+prueba09-06
+11/02/2095
+
+Testing0606
+
+Prueba-0609
 
 01-Prueba-060625

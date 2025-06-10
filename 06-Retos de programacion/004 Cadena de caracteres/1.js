@@ -187,3 +187,43 @@ function reemplazar_Estructura(obj) {
     // const suma = numeros.reduce((acumulador, numero) => acumulador + (numero / 2), 0);
     // const promedio = suma / numeros.length;
     // console.log(`El promedio de las divisiones es: ${promedio}`);
+
+
+
+        const array_Objeto = {
+        array_Objetos: [
+        {nombre: "Juana", estado: "Casada", edad:25},
+        {nombre: "Jaime", estado: "Casado", edad: 33},
+        {nombre: "Pamela", estado: "Viuda", edad: 42},
+        {nombre: "Raul", estado: "Comprometido", edad:30},
+        {nombre: "Rosa", estado: "Casada", edad: 33},
+    ]
+    };
+function estructuras_Anidadas () {
+    const valor_divisor = 5;
+    array_Objeto.array_Objetos.forEach((edad) => {
+        if (edad === 33) {
+            edad / valor_divisor;
+        }
+    });
+}
+estructuras_Anidadas ();
+console.log(array_Objeto);
+
+//     const array_Objeto = {
+//         array_Objetos: [
+//         {nombre: "Juana", estado: "Casada", edad:25},
+//         {nombre: "Pamela", eestado: "Viuda", edad: 42},
+//         {nombre: "Raul", estado: "Comprometido", edad:30},
+//         {nombre: "Rosa", estado: "Casada", edad: 33},
+//     ]
+//     };
+// function estructuras_Anidadas () {
+//     array_Objeto.array_Objetos.forEach((molecula) => {
+//         if (molecula.estado === "Casada") {
+//             molecula.estado = "soltera";
+//         }
+//     });
+// }
+// estructuras_Anidadas ();
+// console.log(array_Objeto);
