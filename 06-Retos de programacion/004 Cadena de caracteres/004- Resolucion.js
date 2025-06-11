@@ -1661,7 +1661,7 @@ function division_Numeros() {
     const divisor = 4;
     const resultado = divisor / finalidades;
     console.log(`El resultado de la división es: ${resultado}`);
-    console.log(finalidades.map((finalidades) =>{
+    console.log(finalidades.map((finalidades) => {
 
     }))
 }
@@ -1708,7 +1708,7 @@ division_Objetos();
  * Divide todos los elementos de una matriz bidimensional por un numero dado y devuelve una nueva matriz con los resultados
  */
 function division_Matrices() {
-        const matrices = [
+    const matrices = [
         [1, 2, 3],
         [4, 5, 6],
         [7, 8, 9]
@@ -1719,7 +1719,7 @@ function division_Matrices() {
     //     return matriz;
     const divisor_Matrices = 3;
     console.log(matrices[2][2] / divisor_Matrices);
-    }
+}
 division_Matrices();
 
 /** EJERCICIO 2: División en un rango dinámico
@@ -1746,7 +1746,7 @@ function divisionEstructurasAnidadas(arr, factor) {
         return nuevo;
     });
 }
-const arr = [1,2,3,4,5,6,7,8,9];
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const factor = 2;
 const reajuste = arr / factor;
 console.log(reajuste);
@@ -1764,23 +1764,170 @@ console.log(numeros_Bing_Uno / BigInt(numeros_Bing_Dos));
 // }
 // reajuste_BigInt();
 
-/** EJERCICIO 5: División en múltiples pasos
- * Simula un sistema de cálculo financiero donde los valores pasan por varias divisiones secuenciales y afectan otros datos.
- */
-function division_multiples () {
 
+
+
+
+// Union
+/* Toma un conjunto y devuelve un nuevo conjunto que contiene elementos que estan en este conjunto y en el conjunto dado o en ambos.
+*/
+
+/** EJERCICIOS FACILES */
+
+// EJERCICIO 1: Une dos arrays de números y muestra el resultado
+//concat () → Se utiliza para fusionar dos o mas matrices
+const array_One = [1, 2, 3, 4, 5];
+const array_Two = [6, 7, 8, 9, 10];
+const resultado_arrays = array_One.concat(array_Two);
+console.log(resultado_arrays);
+
+// EJERCICIO 2: Une dos arrays de cadenas de texto y muestra el array combinado
+const frutas = ["Fresa", "Platano", "Manzana", "Sandia"];
+const verduras = ["Papa", "Cebolla", "Chiles", "Tomate"];
+const union_Texto = frutas.concat(verduras);
+console.log(union_Texto);
+
+// EJERCICIO 3: Une dos arrays y elimina los elementos duplicados
+const arreglo_Uno = [11, 2, 3, 4, 5, 66, 10, 8, 3, 44];
+const arreglo_Dos = [4, 2, 33, 5, 8, 2, 34, 54, 66]
+const resultado_Eliminacion = new Set(arreglo_Uno, arreglo_Dos);
+// const respuesta_arrays = []
+console.log(resultado_Eliminacion);
+
+// EJERCICIO 4: Usa el operador spread para unir dos arrays en uno solo
+const array_unir1 = [3, 4, 5, 6];
+const array_unir2 = [1, 2, 7, 8];
+const union_Resultado = [...array_unir1, ...array_unir2];
+console.log(union_Resultado);
+
+// *** EJERCICIO 5: Crea una función que reciba dos arrays y devuelva su unión
+function devolver_Union(arreglo_Primero, arreglo_Segundo) {
+    return arreglo_Primero.concat(arreglo_Segundo);
+    // const arreglo_Uno = [1,2,3,4,5];
+    // const arreglo_Dos = [6,7,8,9,10];
+    // const union_Texto = arreglo_Uno.concat(arreglo_Segundo);
+    // console.log(union_Texto);
 }
-division_multiples();
+console.log(devolver_Union([8, 7, 6, 5], [4, 3, 2, 1]));
+// }
+
+
+/** INTERMEDIOS */
+//*** EJERCICIO 1: Une varios arrays en uno solo utilizando un método adecuado
+const conjunto_One = [1, 2, 3, 4, 5];
+const conjunto_Two = [6, 7, 8, 9, 10];
+const conjunto_Three = [2, 6, 3, 7, 8];
+const conjuntos_Numericos = conjunto_One.concat(conjunto_Two).concat(conjunto_Three);
+console.log(conjuntos_Numericos);
+
+// EJERCICIO 2: Une tres arrays y filtrar solo los valores únicos
+// filter () → Crea un nuevo array de todos los elementos que cumplen la condicion implemenetada por la funcion dada
+const juntar_Uno = [9, 8, 7];
+const juntar_Dos = [6, 5, 4];
+const juntar_Tres = [3, 2, 1];
+const consecuencia = juntar_Uno.concat(juntar_Dos).concat(juntar_Tres);
+console.log(consecuencia);
+
+const arrays = [[1, 2], [3, 4], [5, 6]];
+const union = arrays.flat();
+console.log(union);
+
+//*** EJERCICIO 3: Une arrays de objetos y elimina duplicados basados en una propuedad especifica
+// const array_objetos1 = [{nombre: "Juan", edad: 35, estado: "casada"}];
+// const array_Objetos2 = [{nombre: "Pamela", edad: 42, estado: "Casada"}];
+// const resultado = [...array_objetos1, ...array_Objetos2].filter()
+const arreglo_Objetos1 = [{ id: 1 }, { id: 7 }, { id: 4 }, { id: 3 }, { id: 5 }];
+const arreglo_Objetos2 = [{ id: 5 }, { id: 2 }, { id: 9 }, { id: 1 }, { id: 7 }];
+const union_Objetos = [...arreglo_Objetos1, ...arreglo_Objetos2].filter((obj, index, self) =>
+    index === self.findIndex(o => o.id === obj.id)
+);
+console.log(union_Objetos);
+
+//*** EJERCICICO 4: Une dos array y ordena el resultado de menor a mayor
+// sort () → ordena los elementos de una matriz en su lgra y devuelve la referenecia a la mism matriz
+// El orden predeterminado es ascedente, basado en la conversion de los elementyos de las cadenas y la comparacion de sus secuencias de valores
+const array_Mayor = [9, 2, 6, 4, 7, 1];
+const array_Menor = [3, 5, 8, 10, 24];
+const contestacion = [...array_Mayor, ...array_Menor].sort((array_Mayor, array_Menor) => array_Mayor - array_Menor);
+console.log(contestacion);
+
+/** EJERCICIO 5: Une dos arrays y calcula la suma de todos sus elementos
+ * 
+ */
+const orden_arrays = [6, 7, 8, 9, 10];
+const orden_arrays1 = [1, 2, 3, 4, 5 ];
+const resultado_orden = orden_arrays.concat(orden_arrays1);
+const suma_Orden = resultado_orden.reduce((suma, current) => suma + current,0);
+console.log(suma_Orden);
+
+// 0 6    6
+// 6 7    13
+// 13 8  21
+// 21 9  30
+// 30 10 40
+// 40 1  41
+// 41 2  43
+// 43 4  47
+// 47 5  52
+
+// Testing-0611 Testing-0611
+
+
+/** DIFICILES */
+/** EJERCICIO 1: Une arrays de diferentes profundidades en un solo array plano */
+// flat.(Infinity) → Crea una nueva matriz con todos los elemenetos de las submatriz concatenadas en ella de forma recursiva hasta las profundidad especifica
+const array_Profundidad = [1,2,[4,5,6, [8,3,4,5,[2,[2]]]]];
+console.log(array_Profundidad.flat(Infinity));
+
+/** EJERICIO 2: Une arrays de objetos y combina propiedades repetida sumando sus valores  */
+const union_Arrays_objetos = [ edad = 30, juntada = 5 ];
+const union_Arrays_Objetos2 = [ edad= 45, juntada = 10 ];
+const union_Arrays = union_Arrays_objetos.concat(union_Arrays_Objetos2);
+const suma_Repetidos = union_Arrays.reduce((suma, current) => suma + current, 0);
+console.log(suma_Repetidos);
+
+/** EJERCICIO 3: Une dos arrays y conserva el orden original de aparición de los elementos */
+const orden_Original = [2,3,4,5,6];
+const orden_Original2 = [7,8,9,10];
+const union_Orden_Original = orden_Original.concat(orden_Original2);
+console.log(union_Orden_Original);
+
+/** EJERCICIO 4: Une varios arrays y crea un objeto que indique la frecuencia de cada elemento */
+const new_Array1 = [1,2,3,4,5];
+const new_Array2 = [6,7,8,9,10];
+const union_New_Arrays = new_Array1.concat(new_Array1);
+console.log(union_New_Arrays);
+
+/** EJERCICIO 5: Une arrays de arrays y elimina duplicados en todos los niveles. */
+const arrays_Unir_One =  [id = 9,id = 2,[id = 4,id = 5,id = 6, [id = 8,id = 3,id = 4,id = 5,[id = 2,[id = 2]]]]];
+const arrays_Unir_DOS =  [id = 5,id = 4,[id = 3,id = 2,id = 0, [id = 0,id = 0,id = 6, id = 2,[id = 1,[id = 8]]]]];
+const obtenido_Arrays = [...arrays_Unir_One, ...arrays_Unir_DOS].filter((obj, index, self) =>
+    index === self.findIndex(o => o.id === obj.id));
+console.log(obtenido_Arrays);
 
 
 
+// const arrays_Unir_One = [
+//   { id: 9 }, { id: 2 }, [{ id: 4 }, { id: 5 }, { id: 6 }, [{ id: 8 }, { id: 3 }, { id: 4 }, { id: 5 }, [{ id: 2 }, [{ id: 2 }]]]]
+// ];
+// const arrays_Unir_DOS = [
+//   { id: 5 }, { id: 4 }, [{ id: 3 }, { id: 2 }, { id: 0 }, [{ id: 0 }, { id: 0 }, { id: 6 }, { id: 2 }, [{ id: 1 }, [{ id: 8 }]]]]
+// ];
 
+// // Función para aplanar completamente el array
+// function flattenDeep(arr) {
+//   return arr.reduce((acc, val) =>
+//     Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+// }
 
-prueba09-06
-11/02/2095
+// // Unir y aplanar ambos arrays
+// const unidos = flattenDeep([...arrays_Unir_One, ...arrays_Unir_DOS]);
 
-Testing0606
+// // Eliminar duplicados por id
+// const unicos = unidos.filter(
+//   (obj, index, self) =>
+//     obj && obj.id !== undefined &&
+//     index === self.findIndex(o => o.id === obj.id)
+// );
 
-Prueba-0609
-
-01-Prueba-060625
+// console.log(unicos);
