@@ -1905,8 +1905,6 @@ const obtenido_Arrays = [...arrays_Unir_One, ...arrays_Unir_DOS].filter((obj, in
     index === self.findIndex(o => o.id === obj.id));
 console.log(obtenido_Arrays);
 
-
-
 // const arrays_Unir_One = [
 //   { id: 9 }, { id: 2 }, [{ id: 4 }, { id: 5 }, { id: 6 }, [{ id: 8 }, { id: 3 }, { id: 4 }, { id: 5 }, [{ id: 2 }, [{ id: 2 }]]]]
 // ];
@@ -1931,3 +1929,26 @@ console.log(obtenido_Arrays);
 // );
 
 // console.log(unicos);
+
+
+
+
+// Interpolacion
+// Es una forma de crear cadenas mas limpias y legibles.
+
+
+/** EJERCICIO 1: Multiplicar cada elemento de un array por 3 usando .map(). */
+function multiplicacion_Elementos () {
+    const multiplicacion_numero = [1, 4, 6, 8, 3, 4, 9];
+
+}
+
+//  * Toma un array de números y usa .map() para generar un nuevo array con cada número dividido entre 3.
+//  */
+// function arry_Dividido() {
+//     const array_Numeros = [3, 6, 9, 12, 15, 18];
+//     const nuevo_array = array_Numeros.map((cifra) => cifra / 3);
+//     console.log(nuevo_array);
+//     return nuevo_array;
+// }
+// arry_Dividido();
