@@ -1933,22 +1933,46 @@ console.log(obtenido_Arrays);
 
 
 
-// Interpolacion
+// INTERPOLACION
 // Es una forma de crear cadenas mas limpias y legibles.
-
 
 /** EJERCICIO 1: Multiplicar cada elemento de un array por 3 usando .map(). */
 function multiplicacion_Elementos () {
     const multiplicacion_numero = [1, 4, 6, 8, 3, 4, 9];
-
+    const respuesta_Multiplicacion = multiplicacion_numero.map((cifra) => cifra * 3);
+    console.log(respuesta_Multiplicacion);
+    return respuesta_Multiplicacion;
 }
+multiplicacion_Elementos ();
 
-//  * Toma un array de números y usa .map() para generar un nuevo array con cada número dividido entre 3.
-//  */
-// function arry_Dividido() {
-//     const array_Numeros = [3, 6, 9, 12, 15, 18];
-//     const nuevo_array = array_Numeros.map((cifra) => cifra / 3);
-//     console.log(nuevo_array);
-//     return nuevo_array;
+
+/** EJERCICIO 2: Restar 5 a cada número de un array utilizando .forEach(). */
+const disminuciones = [10,25,30,45,74];
+const numero_a_Restar = 5;
+const array_Restado = disminuciones.forEach(disminucion => disminucion - numero_a_Restar);
+console.log(array_Restado);
+
+
+/** EJERCICIO 2: Restar 5 a cada número de un array utilizando .map(). */
+const disminuciones = [10, 25, 30, 45, 74];
+const numero_a_Restar = 5;
+const array_Restado = disminuciones.map(disminucion => disminucion - numero_a_Restar);
+console.log(array_Restado); // [5, 20, 25, 40, 69]
+//↑
+// 10 ,5 → 5
+// 25, 5 → 20
+// 30, 5 → 25
+// 45, 5 → 40
+// 74, 5 → 69
+
+
+/** EJERCICIO 3: Concatenar cada string de un array con "!" empleando .map().  */
+//Concatenar → Es unir canedas el simbolo de ma (+)
+// function concantenar_Strings () {
+// const concatenar_string = ["hola", "hoy", "es", "jueves"];
+// const concatenar_string1 =[ "y", "esta", "nublado"];
+// const respuesta_concatenacion =  concatenar_string + concatenar_string1;
+// console.log(respuesta_concatenacion);
 // }
-// arry_Dividido();
+// concantenar_Strings ();
+
