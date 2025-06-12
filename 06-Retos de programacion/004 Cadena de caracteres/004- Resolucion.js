@@ -1970,17 +1970,36 @@ console.log(array_Restado);
 
 /** EJERCICIO 3: Concatenar cada string de un array con "!" empleando .map().  */
 //Concatenar → Es unir canedas el simbolo de mas (+)
-function concantenar_Strings () {
+// function concantenar_Strings () {
 const concatenaciones = ["hola", "hoy", "es", "jueves"];
-const concatenar_string1 = [ "y", "esta", "nublado"];
-const respuesta_concatenacion =  concatenacion.map(concatenacion => concatenar_string1);
-
+const respuesta_concatenacion =  concatenacion.map(concatenacion => concatenacion != concatenaciones);
 console.log(respuesta_concatenacion);
-}
-concantenar_Strings ();
+// }
+// concantenar_Strings ();
 
 // const disminuciones = [10, 25, 30, 45, 74];
 // const numero_a_Restar = 5;
 // const array_Restado = disminuciones.map(disminucion => disminucion - numero_a_Restar);
 // console.log(array_Restado);
 
+
+
+
+// Calcula el punto medio entre dos números.
+//  Dado un número inicial y uno final, determina cuál es el valor interpolado exactamente a la mitad entre ambos.
+
+
+// Agrega valores intermedios en un array numérico.
+//  Dado un array de números consecutivos, inserta un valor interpolado entre cada par de elementos.
+
+
+// Interpolación con porcentaje personalizado.
+//  Escribe una función que, dados dos números y un porcentaje, devuelva el valor que representa esa proporción entre los dos.
+
+
+// Interpolación en cadenas de texto.
+//  Construye una frase personalizada utilizando variables dentro de un template string, como insertar nombre y edad en una presentación.
+
+
+// *** Interpolación de colores RGB.
+//  Dado un color inicial y uno final en formato RGB, calcula el color intermedio para un porcentaje determinado (por ejemplo, al 50%).
