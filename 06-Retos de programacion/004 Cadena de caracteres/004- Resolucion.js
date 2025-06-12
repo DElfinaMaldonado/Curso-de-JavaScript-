@@ -1945,21 +1945,23 @@ function multiplicacion_Elementos () {
 }
 multiplicacion_Elementos ();
 
-
 /** EJERCICIO 2: Restar 5 a cada número de un array utilizando .forEach(). */
-const disminuciones = [10,25,30,45,74];
-const numero_a_Restar = 5;
-const array_Restado = disminuciones.forEach(disminucion => disminucion - numero_a_Restar);
-console.log(array_Restado);
-
+// const disminuciones = [10,25,30,45,74];
+// const numero_a_Restar = 5;
+// const array_Restado = disminuciones.forEach(disminucion => disminucion - numero_a_Restar);
+// console.log(array_Restado);
 
 /** EJERCICIO 2: Restar 5 a cada número de un array utilizando .map(). */
 const disminuciones = [10, 25, 30, 45, 74];
 const numero_a_Restar = 5;
 const array_Restado = disminuciones.map(disminucion => disminucion - numero_a_Restar);
-console.log(array_Restado); // [5, 20, 25, 40, 69]
+console.log(array_Restado);
+// const disminuciones = [10, 25, 30, 45, 74];
+// const numero_a_Restar = 5;
+// const array_Restado = disminuciones.foreach(disminucion => disminucion - numero_a_Restar);
+// console.log(array_Restado);
 //↑
-// 10 ,5 → 5
+// 10, 5 → 5
 // 25, 5 → 20
 // 30, 5 → 25
 // 45, 5 → 40
@@ -1967,12 +1969,18 @@ console.log(array_Restado); // [5, 20, 25, 40, 69]
 
 
 /** EJERCICIO 3: Concatenar cada string de un array con "!" empleando .map().  */
-//Concatenar → Es unir canedas el simbolo de ma (+)
-// function concantenar_Strings () {
-// const concatenar_string = ["hola", "hoy", "es", "jueves"];
-// const concatenar_string1 =[ "y", "esta", "nublado"];
-// const respuesta_concatenacion =  concatenar_string + concatenar_string1;
-// console.log(respuesta_concatenacion);
-// }
-// concantenar_Strings ();
+//Concatenar → Es unir canedas el simbolo de mas (+)
+function concantenar_Strings () {
+const concatenaciones = ["hola", "hoy", "es", "jueves"];
+const concatenar_string1 = [ "y", "esta", "nublado"];
+const respuesta_concatenacion =  concatenacion.map(concatenacion => concatenar_string1);
+
+console.log(respuesta_concatenacion);
+}
+concantenar_Strings ();
+
+// const disminuciones = [10, 25, 30, 45, 74];
+// const numero_a_Restar = 5;
+// const array_Restado = disminuciones.map(disminucion => disminucion - numero_a_Restar);
+// console.log(array_Restado);
 
