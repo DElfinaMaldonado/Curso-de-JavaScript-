@@ -1967,30 +1967,39 @@ console.log(array_Restado);
 // 45, 5 → 40
 // 74, 5 → 69
 
-
-/** EJERCICIO 3: Concatenar cada string de un array con "!" empleando .map().  */
-//Concatenar → Es unir canedas el simbolo de mas (+)
-// function concantenar_Strings () {
-const concatenaciones = ["hola", "hoy", "es", "jueves"];
-const respuesta_concatenacion =  concatenacion.map(concatenacion => concatenacion != concatenaciones);
-console.log(respuesta_concatenacion);
-// }
-// concantenar_Strings ();
-
-// const disminuciones = [10, 25, 30, 45, 74];
-// const numero_a_Restar = 5;
-// const array_Restado = disminuciones.map(disminucion => disminucion - numero_a_Restar);
-// console.log(array_Restado);
-
-
-
-
 // Calcula el punto medio entre dos números.
 //  Dado un número inicial y uno final, determina cuál es el valor interpolado exactamente a la mitad entre ambos.
-
+const suma_Numero1 = 5;
+const suma_Numero2 = 8;
+const suma_dos_numeeros = suma_Numero1 + suma_Numero2;
+console.log(suma_dos_numeeros / 2); //La suma es igual a 13 y el putnlo medio es 6.5 → Por lo tanto 6.5 es la interpolacion entre estos dos numeros
 
 // Agrega valores intermedios en un array numérico.
 //  Dado un array de números consecutivos, inserta un valor interpolado entre cada par de elementos.
+const array_Numerico = [
+    {String: "array1", valor: 20},
+    {String: "array2", valor: 40} ];
+const resultado_array_Numerico = "array1";
+console.log(resultado_array_Numerico / 2 );
+
+// 30
+// 15
+// 45
+// 2
+// 40
+// 1
+// 15
+// 48
+//  63 
+//    31
+//  2 63
+// 1   01
+// 39 
+// 43
+// 81
+//   40
+// 2 81
+//   0 1
 
 
 // Interpolación con porcentaje personalizado.
@@ -2003,3 +2012,8 @@ console.log(respuesta_concatenacion);
 
 // *** Interpolación de colores RGB.
 //  Dado un color inicial y uno final en formato RGB, calcula el color intermedio para un porcentaje determinado (por ejemplo, al 50%).
+
+
+/// winget upgrade Node.js → actualizr noode
+
+/// npm install react react-dom next actualizar e instalar next
