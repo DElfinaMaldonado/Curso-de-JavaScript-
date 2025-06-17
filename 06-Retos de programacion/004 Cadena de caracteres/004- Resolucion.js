@@ -1976,44 +1976,47 @@ console.log(suma_dos_numeeros / 2); //La suma es igual a 13 y el putnlo medio es
 
 // Agrega valores intermedios en un array numérico.
 //  Dado un array de números consecutivos, inserta un valor interpolado entre cada par de elementos.
-const array_Numerico = [
-    {String: "array1", valor: 20},
-    {String: "array2", valor: 40} ];
-const resultado_array_Numerico = "array1";
-console.log(resultado_array_Numerico / 2 );
-
-// 30
-// 15
-// 45
-// 2
-// 40
-// 1
-// 15
-// 48
-//  63 
-//    31
-//  2 63
-// 1   01
-// 39 
-// 43
-// 81
-//   40
-// 2 81
-//   0 1
-
+// const array_Numerico = [2,3,4,5,6,7,8];
+// const array_agregar = 4;
+// const resultado_array_Numerico = array_agregar(array_Numerico);
+// console.log(resultado_array_Numerico);
 
 // Interpolación con porcentaje personalizado.
 //  Escribe una función que, dados dos números y un porcentaje, devuelva el valor que representa esa proporción entre los dos.
-
+const nmerouno = 4;
+const numero_porcentaje = 4;
+const resultadosPorcentaje = nmerouno * numero_porcentaje;
+const cadena_de_valores = `El ${numero_porcentaje * 100} % de ${nmerouno} es ${resultadosPorcentaje.toFixed(2)}`;
+console.log(cadena_de_valores);
+//↓//
+// const valor = 50;
+// const porcentaje = 0.25;
+// const resultadoPorcentaje = valor * porcentaje;
+// const cadenass = `El ${porcentaje * 100} % de ${valor} es ${resultadoPorcentaje.toFixed(2)}`;
+// console.log(cadenass);
 
 // Interpolación en cadenas de texto.
 //  Construye una frase personalizada utilizando variables dentro de un template string, como insertar nombre y edad en una presentación.
-
+const cadena_Primera = "Juan" ;
+const cadena_Segunda = 32;
+console.log(`Hola mi nombre es ${cadena_Primera} y tengo la edad de ${cadena_Segunda}.`);
 
 // *** Interpolación de colores RGB.
 //  Dado un color inicial y uno final en formato RGB, calcula el color intermedio para un porcentaje determinado (por ejemplo, al 50%).
+const color = "pink";
+const colorRGB = " #572364";
+const porcentaje_Color = 5;
+const combinar_Colores = colorRGB * color;
+const resultado_Rgb = `El color es ${porcentaje_Color * 50} % de ${color} es ${combinar_Colores.toFixed(2)}`;
+console.log(resultado_Rgb);
 
+// const valor = 50;
+// const porcentaje = 0.25;
+// const resultadoPorcentaje = valor * porcentaje;
+// const cadenass = `El ${porcentaje * 100} % de ${valor} es ${resultadoPorcentaje.toFixed(2)}`;
+// console.log(cadenass);
 
-/// winget upgrade Node.js → actualizr noode
+// Escribe una función que reciba un nombre y una edad, y devuelva una cadena interpolada con un mensaje de presentación.
+function reciba_Datos (){
 
-/// npm install react react-dom next actualizar e instalar next
+}
