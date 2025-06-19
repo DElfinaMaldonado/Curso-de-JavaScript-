@@ -1150,7 +1150,7 @@ function simular_Estructura() {
 simular_Estructura();
 
 /** EJERCICICO 5:
- *   Recorre un array y cuenta cuántas veces aparece cada elemento usando un objeto auxiliar.
+ *  Recorre un array y cuenta cuántas veces aparece cada elemento usando un objeto auxiliar.
 */
 function recorrer() {
     const elementos = ["manzana", "banana", "manzana", "naranja", "banana", "manzana"];
