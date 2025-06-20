@@ -275,3 +275,5 @@ console.log(copia_animales); // Este es el copia, se cambio un valor pero noa fe
 /** EJERCICIO 5: Desestructuración y sus efectos:
  * Utiliza desestructuración para copiar valores de un objeto o array. Modifica los valores copiados y evalúa si esto tiene impacto en la estructura original.
  */
+
+// Me puedes dar 5 ejercicios sobre  asignación por “valor” y por “referencia”  en javascript 
