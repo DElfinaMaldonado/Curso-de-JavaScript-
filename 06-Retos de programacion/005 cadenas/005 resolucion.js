@@ -234,7 +234,7 @@ console.log(valor_b); // La copia si toma el valor de Carmen
 // El Original si se ve afcetado y la copia igual, ya que apuntan al mismo elemento
 
 
-               ///** Array copias profundas  */
+///** Array copias profundas  */
 //Arrays y copias profundas → Crea un nuevo array con copias independientes de cada elemento
 // Las modificaciones en el array copiado no afecatn al original
 const valor_c = 10;
@@ -249,22 +249,22 @@ const operador_a = {
     saludo: "Hola",
     nombre: "Juan",
 }
-let operador_b = {...a}
-operador_b.nombre= "Manuel";
+let operador_b = { ...a }
+operador_b.nombre = "Manuel";
 console.log(operador_a); //Muestra el objeto original → {saludo: 'Hola', nombre: 'Juan'}
 console.log(operador_b); //Muestra el objeto individuales las letra y poeteriormente el nombre → {0: 'H', 1: 'o', 2: 'l', 3: 'a', 4: '!', nombre: 'Manuel'}
 
 /** EJERCICIO 4: Arrays y copias superficiales vs profundas:
  * Crea un array y copia su contenido usando métodos como .slice() o el spread operator. Cambia un valor del array copiado y analiza si afecta al original.
  */
-const animales= [
+const animales = [
     { animal_uno: "Vaca" },
     { animal_dos: "Zorro" },
     { animal_tres: "Perro" },
     { animal_cuatro: "Loro" },
     { animal_cinco: "Tortuga" },
     { animal_seis: "Pez" },
-    ];
+];
 const copia_animales = animales.slice();
 console.log(animales); //Este es el original
 copia_animales.animal_seis = "Yegua";
@@ -276,4 +276,35 @@ console.log(copia_animales); // Este es el copia, se cambio un valor pero noa fe
  * Utiliza desestructuración para copiar valores de un objeto o array. Modifica los valores copiados y evalúa si esto tiene impacto en la estructura original.
  */
 
-// Me puedes dar 5 ejercicios sobre  asignación por “valor” y por “referencia”  en javascript 
+// Me puedes dar 5 ejercicios dificiles peor que sean faciles de resolver  sobre  asignación por “valor” y por “referencia”  en javascript
+
+// EJERCICIOS DIFICILES
+/**EJERICIO 1: Asignación de variables primitivas
+ * Se tienen dos variables numéricas. Una se asigna con el valor de la otra, luego se modifica una de ellas. Analiza cuál conserva el valor original y cuál cambia, explicando por qué ocurre.
+ */
+const variable_Num1 = 4;
+let variable_Num2 = variable_Num1;
+variable_Num2 = 7;
+console.log(variable_Num1); // Conserva el valor original, manteniendo el 4
+console.log(variable_Num2); // Cambia su valor y toma el valor 7
+
+/** EJERCICIO 2: Cambio de propiedades en objetos compartidos
+ * Se define un objeto con una propiedad inicial. Luego se crea otra variable que hace referencia a ese objeto, y se modifica la propiedad usando esta nueva variable. Determina si el cambio afecta al objeto original o no.
+ */
+const colores = [
+    {color_one : "rosa"},
+    {color_two : "amarillo"},
+    {color_three : "blue"},
+    {color_four : "black"},
+];
+const copia_colores = colores.slice();
+console.log(colores);
+copia_colores.color_two = "purple";
+console.log(copia_colores);
+
+/** EJERCICIO 3: Funciones que modifican valores y referencias
+ * Se declaran una variable numérica y un objeto. Luego, dos funciones intentan modificar estas variables: una con un tipo primitivo y otra con un objeto. Analiza cuál de ellas resulta modificada después de la ejecución.
+ */
+function modificaciones () {
+
+}
