@@ -1,5 +1,96 @@
-// Muestra ejemplos de asignación de variables "por valor" y "por referencia"
+// Tipos de datos por valor
+let mi_valor_a = 10;
+let mi_valor_b = mi_valor_a;
+mi_valor_a = 30;
+console.log(mi_valor_a); // A toma el valor de 30
+console.log(mi_valor_b); // b Se queda con el valor inicial que tenia "a" → 10
 
+
+
+//Por valor
+let transformable = 12;
+function ejercicio_Extra(transformable_a) {
+    transformable_a = 45;
+    // console.log(transformable_a);
+    // transformable = transformable_a;
+    console.log(transformable);
+}
+ejercicio_Extra();
+
+
+// Tipos de datos por referencia → No toma su valor, heredan su referencia
+/** Objetos
+ * Arrays
+ * Funciones
+ */
+// El metodo appened insertar un conjunto de objetos o cadenas despues del ultimo elemento
+let mi_variable_a = [1, 2, 3, 5];
+let mi_variable_b = mi_variable_a;
+mi_variable_b.push(6); // Se le añade el valor de 6 solo a la variable b
+console.log(mi_variable_a);
+console.log(mi_variable_b);
+
+
+function funcion_Impura(individuo) {
+    individuo.edad = 25; //El individuo en edad tiene la edad de 25
+    return individuo; // reetonamos la variable del individuo
+}
+let Julieta = { // Se crea un objeto con el nombre dell individuo
+    nombre: 'Sofia', // Al nombre se le asigna el valor de sofia
+    edad: 23 // La edad del individu se cambia a 23
+}
+let cambiardatodeJulieta = funcion_Impura(Julieta); // aqui se crea una nueva variable llamada "Cambiar dato de Julieta" y se iguala a la funcion con el objeto
+console.log(Julieta); // Se manda a llamar al nombre de Julieta
+console.log(cambiardatodeJulieta); // { nombre: 'Sofia', edad: 25}
+
+
+
+// * DIFICULTAD EXTRA (opcional):
+//  * Crea dos programas que reciban dos parámetros (cada uno) definidos como
+//  * variables anteriormente.
+//  * - Cada programa recibe, en un caso, dos parámetros por valor, y en otro caso, por referencia.
+//  *   Estos parámetros los intercambia entre ellos en su interior, los retorna, y su retorno
+//  *   se asigna a dos variables diferentes a las originales. A continuación, imprime
+//  *   el valor de las variables originales y las nuevas, comprobando que se ha invertido
+//  *   su valor en las segundas.
+//  *   Comprueba también que se ha conservado el valor original en las primeras.
+//  */
+
+
+/// Por valor
+function ejercicio_extra(cambiante_a, cambiante_b) {
+    const tiemp = cambiante_a;
+    cambiante_a = cambiante_b;
+    cambiante_b = tiemp;
+    return cambiante_a, cambiante_b;
+}
+cambiante_c = 10;
+cambiante_d = 20;
+cambiante_e = cambiante_c;
+cambiante_f = cambiante_d;
+console.log((cambiante_c), (cambiante_d)); // 10 20
+console.log((cambiante_f), (cambiante_e)); // 20 10
+
+// Por refetencia
+function extra_Referencia(alterable) {
+    alterable.push(30);
+    alterable_a = alterable;
+    alterable_a.push(40);
+    console.log(alterable);  //Salida:  [10,20,30,40]
+    console.log(alterable_a); //Salida:  [10,20,30,40]
+}
+alterable_b = [10, 20];
+// alterable_d = [30, 40];
+// alterable_e = alterable_c;
+// alterable_f = alterable_d;
+extra_Referencia(alterable_b);
+console.log(alterable_b); //Salida:  [10,20,30,40]
+// console.log((alterable_c), (alterable_d)); // 10 20
+// console.log((alterable_f), (alterable_e)); // 20 10
+
+
+// Por referencia
+// Muestra ejemplos de asignación de variables "por valor" y "por referencia"
 // Asignando valores complejos
 const variable_a = [1, 2, 3, 5];
 const variable_b = variable_a;
@@ -290,10 +381,10 @@ console.log(variable_Num2); // Cambia su valor y toma el valor 7
  * Se define un objeto con una propiedad inicial. Luego se crea otra variable que hace referencia a ese objeto, y se modifica la propiedad usando esta nueva variable. Determina si el cambio afecta al objeto original o no.
  */
 const colores = [
-    {color_one : "rosa"},
-    {color_two : "amarillo"},
-    {color_three : "blue"},
-    {color_four : "black"},
+    { color_one: "rosa" },
+    { color_two: "amarillo" },
+    { color_three: "blue" },
+    { color_four: "black" },
 ];
 let copia_colores = colores.slice();
 copia_colores.colores.color_two = "purple";
@@ -317,7 +408,7 @@ console.log(copia_colores.colores.color_two);
 /** EJERCICIO 3: Funciones que modifican valores y referencias
  * Se declaran una variable numérica y un objeto. Luego, dos funciones intentan modificar estas variables: una con un tipo primitivo y otra con un objeto. Analiza cuál de ellas resulta modificada después de la ejecución.
  */
-function modificaciones () {
+function modificaciones() {
 
 }
 
