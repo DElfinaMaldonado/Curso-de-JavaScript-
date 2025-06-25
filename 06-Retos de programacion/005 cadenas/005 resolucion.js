@@ -265,18 +265,16 @@ const animales = [
     { animal_cinco: "Tortuga" },
     { animal_seis: "Pez" },
 ];
-const copia_animales = animales.slice();
-console.log(animales); //Este es el original
-copia_animales.animal_seis = "Yegua";
-console.log(copia_animales); // Este es el copia, se cambio un valor pero noa fecto al original
-// copia_animales.animal_uno= "Alacran";
-// console.log(animales);
+let copia_animales = animales.slice();
+copia_animales.animales = "yegua";
+console.log(animales); // Este es el original
+console.log(copia_animales); //Esta es la copia
+
 
 /** EJERCICIO 5: Desestructuración y sus efectos:
  * Utiliza desestructuración para copiar valores de un objeto o array. Modifica los valores copiados y evalúa si esto tiene impacto en la estructura original.
  */
 
-// Me puedes dar 5 ejercicios dificiles peor que sean faciles de resolver  sobre  asignación por “valor” y por “referencia”  en javascript
 
 // EJERCICIOS DIFICILES
 /**EJERICIO 1: Asignación de variables primitivas
@@ -297,10 +295,24 @@ const colores = [
     {color_three : "blue"},
     {color_four : "black"},
 ];
-const copia_colores = colores.slice();
+let copia_colores = colores.slice();
+copia_colores.colores.color_two = "purple";
 console.log(colores);
-copia_colores.color_two = "purple";
-console.log(copia_colores);
+console.log(copia_colores.colores.color_two);
+
+
+// const animales = [
+//     { animal_uno: "Vaca" },
+//     { animal_dos: "Zorro" },
+//     { animal_tres: "Perro" },
+//     { animal_cuatro: "Loro" },
+//     { animal_cinco: "Tortuga" },
+//     { animal_seis: "Pez" },
+// ];
+// let copia_animales = animales.slice();
+// copia_animales.animales = "yegua";
+// console.log(animales); // Este es el original
+// console.log(copia_animales); //Esta es la copia
 
 /** EJERCICIO 3: Funciones que modifican valores y referencias
  * Se declaran una variable numérica y un objeto. Luego, dos funciones intentan modificar estas variables: una con un tipo primitivo y otra con un objeto. Analiza cuál de ellas resulta modificada después de la ejecución.
@@ -308,3 +320,7 @@ console.log(copia_colores);
 function modificaciones () {
 
 }
+
+/// Testing-2406
+// 240625-testing
+// 01-test-24
