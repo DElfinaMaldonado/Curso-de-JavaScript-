@@ -189,28 +189,41 @@ console.log(factorial_Contar(10));
 // 10 * 9 = 90 90 * 8 = 720 720 * 7 = 5040 5040 * 6 = 30240 30240 * 5 = 151200 151200 * 4 = 604800 604800 * 3 = 1814400 1814400 * 2 = 3628800
 
 // Calcular  el valor  de un elemento crocretos (según su posición) en la  sucesión de Fibonaccion
-let factorial = (importe) => {
-    if (importe < 0) {
-        console.loglog(" Los numeros negativos no sonvalidos");
-    } else if (importe <= 0) {
-        console.log("Los numeros negativos no son validos");
-        return 0;
-    } else if (importe == 1) {
-        return 0;
-    } else if (importe == 2) {
-        return 1;
-    } else {
-        (importe - 1) + (importe - 2);
-    }
-}
-console.log("El factorial de 5 es:", factorial(5));
+// function factorial (importe) {
+// // let factorial = (importe) => {
+//     if (importe < 0) {
+//         console.loglog(" Los numeros negativos no sonvalidos");
+//     } else if (importe <= 0) {
+//         console.log("Los numeros negativos no son validos");
+//         return 0;
+//     } else if (importe == 1) {
+//         return 0;
+//     } else if (importe == 2) {
+//         return 1;
+//     } else {
+//         (importe - 1) + (importe - 2);
+//     }
+// }
+// console.log("El factorial de 5 es:", factorial(5));
+
+
+// function calculo_Factorial(cifra) {
+//     if (cifra < 0)
+//         return -1;
+//     else if (cifra == 0)
+//         return 1;
+//     else {
+//         return (cifra * calculo_Factorial(cifra - 1));
+//     }
+// }
+// console.log(calculo_Factorial(4));
 
 
 
 // EJERCICIOS DIFICILES
 // EJERCICIO 1: Resolver un laberinto matriz 2D.
 /* Implementar una funcion que encuentre una salida desde un punto inicial hasta una celda objetivo en una matriz representando un laberinto con obstaculos.*/
-function  laberinto(laberinto, fila, columna, salida) {
-    if (fila < 0 || fila >= laberinto.length || columna < 0 || columna >= laberinto[0].length || laberinto[fila][columna]
+// function  laberinto(laberinto, fila, columna, salida) {
+//     if (fila < 0 || fila >= laberinto.length || columna < 0 || columna >= laberinto[0].length || laberinto[fila][columna]
 
-}
+// } testing-2706
