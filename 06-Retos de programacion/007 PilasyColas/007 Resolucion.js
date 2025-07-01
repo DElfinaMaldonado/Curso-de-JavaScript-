@@ -95,7 +95,7 @@ const apodo = new PILA_tres();
 apodo.push('Jaime');
 apodo.push('Ramiro');
 apodo.push('Sergio');
-apodo.push('Ramiro');
+apodo.push('Cesar');
 console.log(apodo.peek()); // Imprime  Ramiro
 
 
@@ -134,7 +134,7 @@ class PILA_cinco {
   size = () => this.elementos.length;
 }
 
-const pila_cinco= new PILA_cinco();
+const pila_cinco = new PILA_cinco();
 pila_cinco.push('Jaime');
 pila_cinco.push('Ramiro');
 pila_cinco.push('Sergio');
@@ -145,6 +145,7 @@ console.log(pila_cinco.size()); // Imprime 4 porque hay 4 elementos en la pila
 
 
 // EJERCICIOS INTERMEDIOS:
+
 // EJERCICIO 1: Invertir una cadena
 /**  Usa una pila para invertir el orden de los caracteres de una palabra. */
 // const pila_seis= new PILA_seis();
@@ -157,7 +158,167 @@ const pila_seis = ['Jaime', 'Ramiro', 'Sergio', 'Santiago'];
 pila_seis.reverse();
 console.log(pila_seis);
 
-// EJERCICIO 2:
+// EJERCICIO 2: Comprobación de paréntesis balanceados
+// Valida si una expresión contiene paréntesis abiertos y cerrados correctamente.
+function validarParentesis(expresion) {
+  const pila = [];
+  for (let i = 0; i < expresion.length; i++) {
+    const caracter = expresion[i];
+    if (caracter === '(') {
+      pila.push(caracter);
+    } else if (caracter === ')') {
+      if (pila.length === 0) {
+        return false; // Paréntesis cerrado sin abrir
+      }
+      pila.pop();
+    }
+  }
+  return pila.length === 0; // Si la pila está vacía, los paréntesis están balanceados
+}
+console.log(validarParentesis("((()))")); // True → Se tiene parentesis abiertos y cerrados
+console.log(validarParentesis('(((')); // False → Solo contiene parentesis abiertos
+
+
+// EJERCICIO 3: Eliminar elementos especificos
+/** Elimina todos los elementos iguales a "X" de una pila sin alterar el orden del resto. */
+// Función para eliminar todos los elementos iguales a "X" de una pila sin alterar el orden del resto
+const eliminarDatos_especificos = (pila, elemento) => {
+  const temp = [];
+  while (pila.length > 0) {
+    const top = pila.pop();
+    if (top !== elemento) {
+      temp.push(top);
+    }
+  }
+  while (temp.length > 0) {
+    pila.push(temp.pop());
+  }
+  return pila;
+};
+// console.log(eliminarDatos_especificos);
+
+const eliminarDatos_especific = ["X"];
+const pieza = ['A', 'B', 'C', 'D'];
+// const componente = [];
+eliminarDatos_especific.splice(1, 2);
+console.log(eliminarDatos_especific);
+
 const numeros = ["Hola", "Mundo", "Mixiote", "tacos"];
-numeros.splice(x);
+numeros.splice(1, 2);
 console.log(numeros);
+
+// EJERCICIO 4: Simular deshacer
+/**  Implementa una función que simule un sistema de "deshacer" (undo) usando una pila. */
+function decimal_Binario(decimal) {
+  const acumulador = nuevo_acumulador();
+  if (decimal > 0) {
+    residuo = decimal % 2;
+    acumulador.aplilar(residuo);
+    decimal = decimal;
+  }
+  const binario = "";
+  // if(
+  //   pila.vacia();
+  //   binario = binario + structuredClone(acumulador.desapilar())
+  // )
+}
+// función decimal_a_binario(decimal):
+//   pila = nueva_pila()
+//   mientras decimal > 0:
+//     residuo = decimal % 2
+//     pila.apilar(residuo)
+//     decimal = decimal // 2
+
+//   binario = ""
+//   mientras no pila.esta_vacia():
+//     binario = binario + str(pila.desapilar())
+
+//   regresa binario
+
+
+
+
+
+// EJERCICIOS DE COLAS
+// EJERCICIO FACIL
+// Se utiliza para organizar elementos en una secuencia, donde la insercion se realiza al final y la eliminacion al final
+// El priemro que entra, es el primero en salir
+
+
+// EJERCICIO 1: Crear una cola simple
+/** Crea una cola vacía e inserta cinco números. */
+class COLA_one {
+  fundamentos = [];
+  push = (fundamento) => { return this.fundamentos.push(fundamento) };
+  shift = () => { return this.fundamentos.shift() };
+  isempty = () => { return this.fundamentos.length === 0 };
+  empty = () => { return this.fundamentos.length = 0; };
+  size = () => { return this.fundamentos.length };
+}
+const colaone = new COLA_one();
+colaone.push('g');
+colaone.push('h');
+colaone.push('i');
+console.log(colaone.size());
+console.log(colaone.shift());   // g
+console.log(colaone.shift());  // h
+console.log(colaone.shift()); // i
+
+// EJERCICIO 2: Ver el primer elemento
+/** Muestra cuál es el siguiente en ser atendido sin eliminarlo.  */
+// Metodo push → Agregar nuevos elemenetos a la parte superior de la pila
+// Metodo pop → Eliminara un elemento de la parte superior de la pila
+// Metodo isempty → Comprueba si la pila esta vacia
+// Metodo empty → Eliminara todos los elementos de la pila
+// Metodo size → Devueleve el numero de elementos de la pila
+class COLA_TWO {
+  fundamentos = [];
+  push = (fundamento) => this.fundamentos.push(fundamento);
+  shift = () => this.fundamentos.shift();
+  isempty = () => this.fundamentos.length === 0
+  empty = () => this.fundamentos.length = 0;
+  size = () => this.fundamentos.length;
+  // peek = () => this.fundamentos[this.fundamentos.length - 1];
+  peek = () => this.fundamentos[this.fundamentos.length - 3];
+}
+const two = new COLA_TWO();
+two.push('fresa');
+two.push('uva');
+two.push('platano');
+// console.log(two.size());
+console.log(two.peek()); // fresa → Se obtiene el valor de fresa ya que el primero en entrar
+
+// EJERCICIO 3:
+/**  */
+class COLA_TRES {
+  fundamentos = [];
+  push = (fundamento) => this.fundamentos.push(fundamento);
+  pop = () => this.elementos.pop();
+  shift = () => this.fundamentos.shift();
+  isempty = () => this.fundamentos.length === 0
+  empty = () => this.fundamentos.length = 0;
+}
+const colatres = new COLA_TRES();
+colatres.push('Melon');
+colatres.push('uva');
+colatres.push('platano');
+console.log(colatres.pop());
+
+
+
+// class PILA {
+//   elementos = [];
+//   push = (elemento) => this.elementos.push(elemento);
+//   pop = () => this.elementos.pop();
+//   isempty = () => this.elementos.length === 0;
+//   empty = () => { this.elementos.length = 0; };
+//   size = () => this.elementos.length;
+// }
+
+// const pila = new PILA();
+// pila.push('a');
+// pila.push('b');
+// pila.push('c');
+// console.log(pila.size());  // 3
+// console.log(pila.pop());  // c
+// console.log(pila.size()); // 2
