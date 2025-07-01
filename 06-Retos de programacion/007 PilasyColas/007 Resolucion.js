@@ -330,8 +330,15 @@ class COLA_CINCO {
   size = () => this.cuerpos.length;
 }
 const cola_cinco = new COLA_CINCO();
-cola_cinco.push('Jaime');
-cola_cinco.push('Ramiro');
-cola_cinco.push('Sergio');
-cola_cinco.push('Ramiro');
+cola_cinco.push('Quesadillas');
+cola_cinco.push('Sopes');
+cola_cinco.push('Gorditas');
+cola_cinco.push('Mole');
 console.log(cola_cinco.size()); // Imprime 4 porque hay 4 elementos en la pila
+
+
+
+//  EJERCICIO INTERMEDIOS
+
+// EJERCICIO 1: Simular atención al cliente
+/** Simular atención al cliente */
