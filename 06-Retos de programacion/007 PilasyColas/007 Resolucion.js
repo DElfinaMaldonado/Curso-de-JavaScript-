@@ -278,22 +278,20 @@ class COLA_TWO {
   isempty = () => this.fundamentos.length === 0
   empty = () => this.fundamentos.length = 0;
   size = () => this.fundamentos.length;
-  // peek = () => this.fundamentos[this.fundamentos.length - 1];
   peek = () => this.fundamentos[this.fundamentos.length - 3];
 }
 const two = new COLA_TWO();
 two.push('fresa');
 two.push('uva');
 two.push('platano');
-// console.log(two.size());
 console.log(two.peek()); // fresa → Se obtiene el valor de fresa ya que el primero en entrar
 
-// EJERCICIO 3:
-/**  */
+// EJERCICIO 3: Ver el primer elemento
+/* Muestra cuál es el siguiente en ser atendido sin eliminarlo. */
 class COLA_TRES {
   fundamentos = [];
   push = (fundamento) => this.fundamentos.push(fundamento);
-  pop = () => this.elementos.pop();
+  pop = () => this.fundamentos.pop();
   shift = () => this.fundamentos.shift();
   isempty = () => this.fundamentos.length === 0
   empty = () => this.fundamentos.length = 0;
@@ -302,23 +300,38 @@ const colatres = new COLA_TRES();
 colatres.push('Melon');
 colatres.push('uva');
 colatres.push('platano');
-console.log(colatres.pop());
+console.log(colatres.shift());
 
+//EJERCICIO 4: Comprobar si la cola está vacía
+/** Comprobar si la cola está vacía */
+class COLA_CUATRO {
+  principios = [];
+  push = (principio) => this.principios.push(principio);
+  pop = () => this.principios.pop();
+  isempty = () => this.principios.length === 0;
+  empty = () => { this.principios.length = 0; };
+  size = () => this.principios.length;
+}
+const cola_cuatro = new COLA_CUATRO();
+cola_cuatro.push('Pera');
+cola_cuatro.push('Mango');
+cola_cuatro.push('Frambuesa');
+cola_cuatro.push('Sandia');
+console.log(cola_cuatro.isempty()); // Si no se comentan los nombres, devuelve false porque no esta vacia. En cambio si se comenetan los nombres sale true porque la pila esta vacia
 
-
-// class PILA {
-//   elementos = [];
-//   push = (elemento) => this.elementos.push(elemento);
-//   pop = () => this.elementos.pop();
-//   isempty = () => this.elementos.length === 0;
-//   empty = () => { this.elementos.length = 0; };
-//   size = () => this.elementos.length;
-// }
-
-// const pila = new PILA();
-// pila.push('a');
-// pila.push('b');
-// pila.push('c');
-// console.log(pila.size());  // 3
-// console.log(pila.pop());  // c
-// console.log(pila.size()); // 2
+// EJERCICIO 5: Obtener la longitud de la cola:
+/** Devuelve cuántos elementos contiene actualmente la cola  */
+class COLA_CINCO {
+  cuerpos = [];
+  push = (cuerpo) => this.cuerpos.push(cuerpo);
+  pop = () => this.cuerpos.pop();
+  isempty = () => this.cuerpos.length === 0;
+  empty = () => { this.cuerpos.length = 0; };
+  size = () => this.cuerpos.length;
+}
+const cola_cinco = new COLA_CINCO();
+cola_cinco.push('Jaime');
+cola_cinco.push('Ramiro');
+cola_cinco.push('Sergio');
+cola_cinco.push('Ramiro');
+console.log(cola_cinco.size()); // Imprime 4 porque hay 4 elementos en la pila
