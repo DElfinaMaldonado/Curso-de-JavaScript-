@@ -403,9 +403,9 @@ colaPrioridad.push('Tarea normal', 1);
 colaPrioridad.push('Tarea urgente', 5);
 colaPrioridad.push('Tarea media', 3);
 
-console.log(colaPrioridad.pop()); // { valor: 'Tarea urgente', prioridad: 5 }
-console.log(colaPrioridad.pop()); // { valor: 'Tarea media', prioridad: 3 }
-console.log(colaPrioridad.pop()); // { valor: 'Tarea normal', prioridad: 1 }
+console.log(colaPrioridad.pop()); //  valor: 'Tarea urgente', prioridad: 5
+console.log(colaPrioridad.pop()); //  valor: 'Tarea media', prioridad: 3
+console.log(colaPrioridad.pop()); //  valor: 'Tarea normal', prioridad: 1
 
 // class COLA_SEIS {
 //   fundamentos = [];
