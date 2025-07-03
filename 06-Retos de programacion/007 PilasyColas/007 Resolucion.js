@@ -340,5 +340,31 @@ console.log(cola_cinco.size()); // Imprime 4 porque hay 4 elementos en la pila
 
 //  EJERCICIO INTERMEDIOS
 
-// EJERCICIO 1: Simular atención al cliente
-/** Simular atención al cliente */
+// EJERCICIO 1: Intercalar dos colas
+/** Dadas dos colas, crea una tercera que intercale sus elementos */
+function intercalar_dosColas(FIFO_one, FIFO_two) { // Se crea la funcion para tomar los dos array de las dos colas
+  resultado = []; // Crear un array vacion, para poder alamacenar el intercalado de los dos arrays
+  let i = 0; //Se crea la variable de i con la inicializacion de 0
+  let j = 0; //Se crea la variable de i con la inicializacion de 0
+  while (i < FIFO_one.length || j < FIFO_two) { // Se va a repetir ciclo mientra existan elementos en la cola
+    if (i < FIFO_one.length) {
+      return resultado;
+      i++;
+    }
+    i++;
+    if (j < FIFO_two.length) {
+      return resultado;
+    }
+    j++;
+  }
+}
+
+
+let i = 0;
+while (i < 10) {
+  if (i % 2 == 0) {
+    console.log('Numero par', i);
+  }
+  i++;
+}
+console.log('Fuera del bloque');
