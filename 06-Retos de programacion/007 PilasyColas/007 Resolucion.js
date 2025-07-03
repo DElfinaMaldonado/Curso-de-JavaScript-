@@ -346,25 +346,115 @@ function intercalar_dosColas(FIFO_one, FIFO_two) { // Se crea la funcion para to
   resultado = []; // Crear un array vacion, para poder alamacenar el intercalado de los dos arrays
   let i = 0; //Se crea la variable de i con la inicializacion de 0
   let j = 0; //Se crea la variable de i con la inicializacion de 0
-  while (i < FIFO_one.length || j < FIFO_two) { // Se va a repetir ciclo mientra existan elementos en la cola
+  while (i < FIFO_one.length || j < FIFO_two.length) { // Se va a repetir ciclo mientra existan elementos en la cola
     if (i < FIFO_one.length) {
-      return resultado;
+      resultado.push(FIFO_one[i]);
       i++;
     }
-    i++;
     if (j < FIFO_two.length) {
-      return resultado;
+      resultado.push(FIFO_two[j]);
+      j++;
+  }
+}
+return resultado;
+}
+const FIFO_one = [1, 2, 3, 4];
+const FIFO_two = ['a', 'b', 'c', 'd'];
+const colaIntercalada = intercalar_dosColas(FIFO_one, FIFO_two);
+console.log(colaIntercalada); // Salida: [1,a,2,b,3,c,4,d]
+
+
+// let i = 0;
+// while (i < 10) {
+//   if (i % 2 == 0) {
+//     console.log('Numero par', i);
+//   }
+//   i++;
+// }
+// console.log('Fuera del bloque');
+
+// EJERCICIO 2: Rotar elementos
+/** Mueve el primer elemento de la cola al final N veces */
+// function rotar_Elementos () {
+
+// }
+
+
+// EJERCICIO 3: Prioridad básica
+/* Implementa una cola que permita insertar elementos con prioridad (mayor prioridad = primero en salir). */
+class COLA_PRIORIDAD {
+  origenes = [];
+  push = (valor, prioridad) => this.origenes.push({ valor, prioridad });
+  pop = () => {
+    if (this.origenes.length === 0) return null;
+    let maxIndex = 0;
+    for (let i = 1; i < this.origenes.length; i++) {
+      if (this.origenes[i].prioridad > this.origenes[maxIndex].prioridad) {
+        maxIndex = i;
+      }
     }
-    j++;
-  }
+    return this.origenes.splice(maxIndex, 1)[0];
+  };
+  isempty = () => this.origenes.length === 0;
+  size = () => this.origenes.length;
 }
+const colaPrioridad = new COLA_PRIORIDAD();
+colaPrioridad.push('Tarea normal', 1);
+colaPrioridad.push('Tarea urgente', 5);
+colaPrioridad.push('Tarea media', 3);
+
+console.log(colaPrioridad.pop()); // { valor: 'Tarea urgente', prioridad: 5 }
+console.log(colaPrioridad.pop()); // { valor: 'Tarea media', prioridad: 3 }
+console.log(colaPrioridad.pop()); // { valor: 'Tarea normal', prioridad: 1 }
+
+// class COLA_SEIS {
+//   fundamentos = [];
+//   push = (fundamento) => this.fundamentos.push(fundamento);
+//   pop = () => this.fundamentos.pop();
+//   shift = () => this.fundamentos.shift();
+//   isempty = () => this.fundamentos.length === 0
+//   empty = () => this.fundamentos.length = 0;
+// }
+// const colaseis = new COLA_SEIS();
+// if (colaseis > 8) {
+//     console.log('Usuario mayor de edad');
+// }
+
+// colaseis.push('Melon');
+// colaseis.push('uva');
+// colaseis.push('platano');
+// console.log(colaseis.shift());
 
 
-let i = 0;
-while (i < 10) {
-  if (i % 2 == 0) {
-    console.log('Numero par', i);
-  }
-  i++;
-}
-console.log('Fuera del bloque');
+
+// ...existing code...
+// class COLA_PRIORIDAD {
+//   elementos = [];
+//   // Agrega un elemento con su prioridad
+//   push = (valor, prioridad) => this.elementos.push({ valor, prioridad });
+//   // Saca el elemento con mayor prioridad
+//   pop = () => {
+//     if (this.elementos.length === 0) return null;
+//     let maxIndex = 0;
+//     for (let i = 1; i < this.elementos.length; i++) {
+//       if (this.elementos[i].prioridad > this.elementos[maxIndex].prioridad) {
+//         maxIndex = i;
+//       }
+//     }
+//     // Elimina y retorna el elemento de mayor prioridad
+//     return this.elementos.splice(maxIndex, 1)[0];
+//   };
+//   isempty = () => this.elementos.length === 0;
+//   size = () => this.elementos.length;
+// }
+
+// // Ejemplo de uso:
+// const colaPrioridad = new COLA_PRIORIDAD();
+// colaPrioridad.push('Tarea normal', 1);
+// colaPrioridad.push('Tarea urgente', 5);
+// colaPrioridad.push('Tarea media', 3);
+
+// console.log(colaPrioridad.pop()); // { valor: 'Tarea urgente', prioridad: 5 }
+// console.log(colaPrioridad.pop()); // { valor: 'Tarea media', prioridad: 3 }
+// console.log(colaPrioridad.pop()); // { valor: 'Tarea normal', prioridad: 1 }
+// // ...existing code...
